@@ -1,29 +1,43 @@
-﻿capital = 271
+﻿###Created by SpicyAlfredo###
+capital = 271
 
 oob = "ETH_1936"
 
-set_war_support = 0.5
-set_stability = 0.70 
-set_research_slots = 3
+set_war_support = 0.8
+set_stability = 0.60
 
 # Starting tech
 set_technology = {
 
-	# Extended Technologies
+	# Extended Techologies
 	etax_doctrine = 1
 	camo = 1
+	gw_armored_car = 1
+	steel_production_1 = 1
 	
 	infantry_weapons = 1
 	tech_mountaineers = 1
-	trench_warfare = 1
+	early_fighter = 1
+	gw_artillery = 1
+	motorised_infantry = 1
+	gwtank = 1
+	interwar_antiair = 1
+	
+	
+	
 }
 
 add_ideas = {
 		#laws
 		war_economy
-		limited_conscription
-		second_italo_ethiopian_war #research penalty
+		extensive_conscription
+		closed_economy
+		#ideas
+		not_ready
+		backwards
 }
+
+set_convoys = 5
 
 1939.1.1 = {
 	#generic focuses
@@ -39,7 +53,7 @@ add_ideas = {
 	
 	set_technology = {
 
-		# Extended Technologies
+		# Extended Techologies
 		etax_doctrine = 1
 		camo = 1
 
@@ -151,7 +165,7 @@ if = {
 	create_field_marshal = {
 		name = "Kassa Haile Darge"
 		portrait_path = "gfx/leaders/Africa/portrait_africa_generic_land_5.dds"
-		traits = {old_guard decided_planner trait_bad_staffer}
+		traits = { decided_planner }
 		skill = 2
 		attack_skill = 1
 		defense_skill = 2
@@ -162,7 +176,7 @@ if = {
 		create_field_marshal = {
 			name = "Kassa Haile Darge"
 			portrait_path = "gfx/leaders/Africa/portrait_africa_generic_land_3.dds"
-			traits = {old_guard decided_planner trait_bad_staffer}
+			traits = { decided_planner }
 			skill = 2
 			attack_skill = 1
 			defense_skill = 2
@@ -178,7 +192,7 @@ if = {
 	create_corps_commander = {
 		name = "Seyoum Mengesha"
 		portrait_path = "gfx/leaders/Africa/portrait_africa_generic_land_6.dds"
-		traits = {old_guard desert_fox trait_bad_staffer}
+		traits = { desert_fox }
 		skill = 2
 		attack_skill = 1
 		defense_skill = 1
@@ -188,7 +202,7 @@ if = {
 	create_corps_commander = {
 		name = "Mulugeta Yeggazu"
 		portrait_path = "gfx/leaders/Africa/portrait_africa_generic_land_7.dds"
-		traits = {old_guard trait_mountaineer trait_bad_staffer}
+		traits = {  trait_mountaineer hill_fighter }
 		skill = 2
 		attack_skill = 2
 		defense_skill = 1
@@ -198,7 +212,7 @@ if = {
 	create_corps_commander = {
 		name = "Afawarq Walda Samayat"
 		portrait_path = "gfx/leaders/Africa/portrait_africa_generic_land_3.dds"
-		traits = {old_guard trickster trait_bad_staffer}
+		traits = {  trickster }
 		skill = 2
 		attack_skill = 2
 		defense_skill = 2
@@ -209,7 +223,7 @@ if = {
 		create_corps_commander = {
 			name = "Seyoum Mengesha"
 			portrait_path = "gfx/leaders/Africa/Portrait_Africa_Generic_land_3.dds"
-			traits = {old_guard desert_fox trait_bad_staffer}
+			traits = { desert_fox }
 			skill = 2
 			attack_skill = 1
 			defense_skill = 1
@@ -219,7 +233,7 @@ if = {
 		create_corps_commander = {
 			name = "Mulugeta Yeggazu"
 			portrait_path = "gfx/leaders/Africa/Portrait_Africa_Generic_land_2.dds"
-			traits = {old_guard  trait_mountaineer trait_bad_staffer}
+			traits = {  trait_mountaineer hill_fighter }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 1
@@ -229,7 +243,7 @@ if = {
 		create_corps_commander = {
 			name = "Afawarq Walda Samayat"
 			portrait_path = "gfx/leaders/Africa/Portrait_Africa_Generic_land_1.dds"
-			traits = {old_guard  trickster trait_bad_staffer}
+			traits = {  trickster }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 2
@@ -245,7 +259,7 @@ if = {
 create_corps_commander = {
 	name = "Kassa Haile Darge"
 	portrait_path = "gfx/leaders/Africa/Portrait_Africa_Generic_land_2.dds"
-	traits = {old_guard trait_bad_staffer}
+	traits = {   }
 	skill = 1
     attack_skill = 1
     defense_skill = 1
@@ -256,7 +270,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Imru Haile Selassie"
 	portrait_path = "gfx/leaders/Africa/Portrait_Africa_Generic_land_3.dds"
-	traits = {old_guard trait_bad_staffer }
+	traits = {   }
 	skill = 1
     attack_skill = 1
     defense_skill = 1

@@ -1,253 +1,259 @@
+###Created by SpicyAlfredo###
+
 ideas = {
 	
 	country = {
-	
-	second_italo_ethiopian_war = {
-		allowed = {	original_tag = ETH	}
-		allowed_civil_war = {	always = yes	}
+
+########################
+####1936 START IDEA#####
+########################
+
+	#Pre-Industrial society#
+	backwards = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = yes }
 		removal_cost = -1
-		picture = FRA_scw_intervention_nationalists_focus
+		picture = generic_agrarian_society
 			
 			modifier = {
-				political_power_factor = -0.1
-				research_time_factor = 0.25
+				research_time_factor = 0.99
+				production_speed_buildings_factor = -0.99
+
 			}
 	}
-	
-	
-	ETH_black_lion_corps = { #ind focus 1
-		allowed = {	always = no	}
-			removal_cost = -1
-			picture = generic_manpower_bonus
-			modifier = { conscription = 0.025}
-	}
-	
-	ETH_call_of_lion = {
-		allowed = {	always = no	}
-			removal_cost = -1
-			picture = generic_manpower_bonus		
-			modifier = { conscription = 0.03}	
-	}
-	
-	ETH_christmas_offensive_focus = {
-		allowed = {	always = no	}
-			removal_cost = -1
-			picture = generic_morale_bonus
-			modifier = {
-				stability_factor = 0.10
-				army_core_attack_factor = 0.25
-				army_core_defence_factor = 0.1
-			}
-	}
-	
-	ETH_home_defense_focus = {
-		allowed = {	always = no	}
-			removal_cost = -1
-			picture = generic_morale_bonus
-			modifier = {
-				stability_factor = 0.05
-				army_core_attack_factor = 0.05
-				army_core_defence_factor = 0.10
-			}
-	}
-	
-		ETH_swedish_red_cross = {
-		allowed = {	always = no	}
-			removal_cost = -1
-			picture = generic_morale_bonus
-			modifier = {
-				#casualty_trickleback = 0.10
-				attrition = -0.01
-				experience_loss_factor = -0.05
-			}
-		}
-	
-		ETH_copy_german_design_focus = {
-			picture = generic_infantry_bonus
-			removal_cost = -1
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
-		
-		ETH_hold_the_line = {
-			removal_cost = -1
-			allowed = {	always = no }
-			picture = generic_wall_line
-			modifier = {
-				max_dig_in_factor = 0.10
-			}
-		}
-		
-		ETH_japan_advice = {
-			removal_cost = -1
-			allowed = {	always = no }
-			picture = generic_axis_build_infantry
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-			modifier = {
-				attrition = -0.05
-			}
-		}
-		
-		ETH_lion_roar_focus = {
-		allowed = {	always = no	}
-			removal_cost = -1
-			picture = generic_morale_bonus
-			modifier = {
-				army_core_attack_factor = 0.10
-				army_core_defence_factor = 0.05
-			}
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
-		
-		ETH_lion_roar_focus_lesser = {
-		allowed = {	always = no	}
-			removal_cost = -1
-			picture = generic_morale_bonus
-			modifier = {
-				army_core_attack_factor = 0.15
-				army_core_defence_factor = 0.05
-				research_time_factor = -0.05
-			}
-		}
-		
-		ETH_defensive_imperialism = {
-	
-		allowed = {	always = no}
-		allowed_civil_war = {always = yes}
+	#Irregular military#
+	not_ready = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
 		removal_cost = -1
-		picture = generic_intel_bonus
-		
-			modifier = {		
-			justify_war_goal_time = -0.25
-			generate_wargoal_tension = -0.2
-			}
-		}
-
-	ETH_japanese_navy = {
-	
-		allowed = {	always = no}
-		allowed_civil_war = {always = yes}
-		removal_cost = -1
-		picture = generic_navy_bonus		
-				equipment_bonus = {
-					carrier = {
-						instant = yes
-						build_cost_ic = -0.05
-					}
-					capital_ship = {
-						instant = yes
-						build_cost_ic = -0.05
-					}
-					screen_ship = {
-						instant = yes
-						build_cost_ic = -0.05
-					}
-					submarine = {
-						instant = yes
-						build_cost_ic = -0.05
-					}
-					convoy = {
-						instant = yes
-						build_cost_ic = -0.05
-					}
-				}
-		}
-		
-		ETH_the_long_lance = {
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
+		picture = prc_low_popular_support
 			
 			modifier = {
-				naval_torpedo_range_factor = 1 # double the range
+				experience_gain_army = -0.01
+				army_org_Factor = -0.08
 			}
-		}	
 	}
-	
-	theorist = {
-	
-		ETH_ras_kebbede = {
+	viking_tahm = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = chi_army_corruption2
 			
-			picture = generic_army_arab_2
-
-			allowed = {
-				original_tag = ETH
+			modifier = {
+				recon_factor = 0.05
 			}
-			
-			research_bonus = {
-				land_doctrine = 0.07
-			}
-			
-			traits = { military_theorist }
-		}
-		
-		ETH_wondossen_kassa = {
-
-			picture = generic_navy_arab_3
-			
-			allowed = {
-				original_tag = ETH
-			}
-			
-			research_bonus = {
-				naval_doctrine = 0.07
-			}
-			
-			traits = { naval_theorist }
-		}	
-
-		ETH_gabriel_zawde_gilaneh = {
-
-			picture = generic_air_arab_2
-			
-			allowed = {
-				original_tag = ETH
-			}
-			
-			research_bonus = {
-				air_doctrine = 0.07
-			}
-			
-			traits = { air_warfare_theorist }
-		}
-		
-		ETH_georges_deffontaine = {
-			
-			picture = generic_navy_europe_1
-			allowed = {
-				original_tag = ETH # Unlocked via focus
-
-			}
-			available = { always = yes }
-			
-			cost = 50
-			
-			research_bonus = {
-				cat_mass_assault = 0.10
-			}
-			
-			traits = { mass_assault_expert }
-		}
-
 	}
+########################
+#####Check Ideas########
+########################
 
+second_italo_ethiopian_war = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = hun_secret_rearmament
+			}
+choosen_path = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = prc_the_long_march2
+			}
+modernize_1 = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = chi_war_of_resistance
+		research_time_factor = -0.01
+		production_speed_buildings_factor = 0.01
+			}
+
+########################
+#####WAR WITH ITALY#####
+########################
+	christmas_offensive = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = chi_war_of_resistance
+			
+			modifier = {
+				army_attack_factor = 0.3
+				army_speed_factor = 0.1
+			}
+	}
+	ETH_resistance_1 = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = chi_war_of_resistance
+			
+			modifier = {
+				max_dig_in = 4
+				army_core_defence_factor = 0.15
+				supply_consumption_factor = -0.05
+				production_speed_bunker_factor = 1
+				out_of_supply_factor = -0.02
+			}
+	}
+	ETH_national_mobilization = {
+		allowed = { original_tag = ETH }
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = chi_army_corruption2
+			
+			modifier = {
+					conscription = 0.01
+					mobilization_speed = 0.50
+					training_time_army_factor = -0.10
+			}
+	}
+	ETH_home_defense = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = yug_federal_defense_council
+			
+			modifier = {
+				consumer_goods_factor = -1	
+			}
+	}
+	ETH_resistance_2 = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = chi_war_of_resistance2
+			
+			modifier = {
+				special_forces_defence_factor = 0.07
+				max_dig_in = 6
+				production_speed_bunker_factor = 1.10
+				army_core_defence_factor = 0.17
+				supply_consumption_factor = -0.07
+				out_of_supply_factor = -0.04
+			}
+	}
+	ETH_resistance_3 = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = chi_war_of_resistance2
+			
+			modifier = {
+				special_forces_defence_factor = 0.10
+				max_dig_in = 8
+				production_speed_bunker_factor = 1.20
+				army_core_defence_factor = 0.20
+				supply_consumption_factor = -0.07
+				out_of_supply_factor = -0.06
+			}
+	}
+	ETH_resistance_4 = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = chi_war_of_resistance2
+			
+			modifier = {
+				special_forces_defence_factor = 0.10
+				max_dig_in = 10
+				production_speed_bunker_factor = 1.25
+				army_core_defence_factor = 0.25
+				supply_consumption_factor = -0.07
+				out_of_supply_factor = -0.08
+			}
+	}
+	ETH_resistance_5 = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = chi_war_of_resistance3
+			
+			modifier = {
+				special_forces_defence_factor = 0.10
+				max_dig_in = 10
+				production_speed_bunker_factor = 1.30
+				army_core_defence_factor = 0.25
+				supply_consumption_factor = -0.10
+				out_of_supply_factor = -0.10
+			}
+	}
+	ETH_resistance_6 = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = chi_war_of_resistance3
+			
+			modifier = {
+				special_forces_defence_factor = 0.20
+				max_dig_in = 15
+				production_speed_bunker_factor = 1.40
+				army_core_defence_factor = 0.30
+				supply_consumption_factor = -0.15
+				out_of_supply_factor = -0.20
+			}
+		}
+	ETH_resistance_7 = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = chi_war_of_resistance3
+			
+			modifier = {
+				special_forces_defence_factor = 0.20
+				max_dig_in = 30
+				production_speed_bunker_factor = 1.50
+				army_core_defence_factor = 0.35
+				supply_consumption_factor = -0.20
+				out_of_supply_factor = -0.30
+			}
+		}
+	ETH_hold = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = chi_war_of_resistance3
+			
+			modifier = {
+				army_core_defence_factor = 0.50
+			}
+		}
+	ETH_second_idea = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = chi_war_of_resistance3
+			
+			modifier = {
+			army_attack_factor = 0.5
+			army_speed_factor = 0.1
+			}
+		}
+	#League of Nations Abandonment#
+	ETH_alone = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = chi_war_of_resistance3
+			
+			modifier = {
+			ai_get_ally_desire_factor = -25
+			democratic_acceptance = -25
+			}
+		}
+	ETH_black_lions = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = chi_war_of_resistance3
+			
+			modifier = {
+			fascism_drift = -0.01
+			conscription = 0.01
+			army_infantry_defence_factor = 0.01
+			}
+		}
+ }
 	political_advisor = {
 
 		ETH_bedjironde_tekle_hawariate = {
@@ -394,7 +400,8 @@ ideas = {
 				original_tag = ETH	
 			}
 			available =  
-			{	
+			{
+				NOT = { has_country_flag = purge_1_group_b }	
 				has_completed_focus = ETH_ferenghi
 			}
 

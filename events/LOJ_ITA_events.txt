@@ -1,42 +1,49 @@
-﻿#ETHIOPIA COUNTRY EVENTS#
-
-
-add_namespace = ethiopia
+﻿#localtiaztion in LOJ_I_enlish#
+add_namespace = ethiopiadeal
 
 country_event = {
-	id = ethiopia.1
-	title = ethiopia.1.t
-	desc = ethiopia.1.d
+	id = ethiopiadeal.1
+	title = ethiopiadeal.1.t
+	desc = ethiopiadeal.1.d
 	picture = GFX_report_event_generic_sign_treaty
+
 
 	is_triggered_only = yes	
 	
 	
 	option = {
-		name = ethiopia.1.a
-		ITA = { country_event = { id = ethiopiadeal.1 hours = 1 } 
-		{ white_peace = ETH } }
+		name = ethiopiadeal.1.a
+		add_political_power = 75
+		puppet = ETH
+		ITA = { white_peace = ETH }
 		hidden_effect = { 
+		ETH = { 
+				kill_country_leader = yes 
 				create_country_leader = {
 				name = "Amedeo Giovanni I"
 				desc = "POLITICS_BENITO_MUSSOLINI_DESC"
 				picture = "protrait_amadeo_aosta3rd.dds"
 				expire = "1965.1.1"
 				ideology = fascism_ideology
-				traits = { # }
+				traits = {
+					#
+						 }
 				}
 			}
 		}
 	}
-country_event = {
-	id = ethiopia.2
-	title = ethiopia.2.t
-	desc = ethiopia.2.d
+}
+news_event = {
+	id = news.336
+	title = news.336.t
+	desc = news.336.d
 	picture = GFX_report_event_generic_sign_treaty
+
 
 	is_triggered_only = yes	
 	
 	
-	option = { name = ethiopia.2.a }		
+	option = { 
+		name = { name = news.336.a }
+		}
 }
-
