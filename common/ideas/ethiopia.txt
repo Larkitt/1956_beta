@@ -40,8 +40,6 @@ ideas = {
 		removal_cost = -1
 		picture = prc_low_popular_support
 			
-			custom_effect_tooltip = available_military_high_command
-			show_ideas_tooltip = ETH_viking_tamm
 
 			modifier = {
 				max_planning = 0.10
@@ -257,22 +255,70 @@ modernize_1 = {
 		picture = chi_war_of_resistance3
 			
 			modifier = {
-			casualty_trickleback = 0.10
-			experience_loss_factor = -0.05
+			experience_loss_factor = -0.1
 			}
 		} 
-	#League of Nations Abandonment#
-	ETH_alone = {
+	ETH_infiltration_idea_1 = {
 		allowed = { original_tag = ETH	}
 		allowed_civil_war = { always = no }
 		removal_cost = -1
 		picture = chi_war_of_resistance3
 			
 			modifier = {
+			
+			army_speed_factor = 0.1
+			supply_consumption_factor = -0.05
+			}
+		}
+	ETH_infiltration_idea_1 = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = chi_war_of_resistance3
+			
+			modifier = {
+			
+			army_speed_factor = 0.15
+			supply_consumption_factor = -0.10
+			}
+		}
+	#League of Nations Abandonment#
+	ETH_alone = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = generic_constitutional_guarantee
+			
+			modifier = {
 			ai_get_ally_desire_factor = -25
 			democratic_acceptance = -25
 			}
 		}
+	#Help for the outside#
+
+	ETH_BEL_help = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = generic_infantry_bonus
+			
+			modifier = {
+			army_infantry_defence_factor = 0.01
+			max_planning = 0.01
+			}
+		}
+	ETH_JAP_help = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = generic_infantry_bonus
+			
+			modifier = {
+			army_attack_factor = 0.01
+			max_planning = 0.01
+			}
+		}
+
 	ETH_black_lions = {
 		allowed = { original_tag = ETH	}
 		allowed_civil_war = { always = no }

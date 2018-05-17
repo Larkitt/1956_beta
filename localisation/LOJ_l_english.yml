@@ -24,6 +24,11 @@
  ETH_hold:0 "Hold the Line!"
  ETH_sweedish_mission:0 "Sweedish Military Mission"
  ETH_sweedish_mission_desc:0 "There is a attachment of Sweedish officers who are advising our officers. \n\n§ This idea grants us a free Military High C ommand advisor - 'Viking Tamm' §!"
+ ETH_JAP_help:0 "Unsanctioned Japanse Attache"
+ ETH_BEL_help_desc:0 "While the main Japanse Attache advising us pulled out at the beginning of the conflict. Some officers sympathetic to our cause have return to help our staff."
+ ETH_BEL_help:0 "Unsanctioned Belgian Attache"
+ ETH_BEL_help_desc:0 "While the main Belgian Attache advising us pulled out at the beginning of the conflict. Some officers sympathetic to our cause have return to help our staff."
+
 #threats
 
 italo_ethiopian_pact:0 "Hoare Laval Pact"
@@ -40,7 +45,10 @@ italo_ethiopian_pact:0 "Hoare Laval Pact"
 
 ETH_formable_nations:0 "The Ferenghi"
 ETH_support_from_HOL:0 "Ask for help from the Dutch"
-
+ETH_support_from_BEL:0 "Restablish Belgian aide"
+ETH_support_from_JAP:0 "Restablish Japanese aide"
+ETH_support_from_BUL:0 "Help from Bulgaria"
+ETH_support_from_NOR:0 "Help from Norway"
  
 #National focus
 
@@ -163,9 +171,9 @@ ETH_support_from_HOL:0 "Ask for help from the Dutch"
  ethiopia.2.t:0 "The Sitution on the Ground"
  ethiopia.2.d:0 "Our commanders recommend back in November that the only path to victory over the superior Italian forces is to launch a massive offensive while their forces are stalled for the wet season. We under took this offensive in December. The plan is to break though the weak part of their lines in Eritrea and Somaliland encircling their forces in the major ports of each region. With the bulk of our forces in the northern push. Though the offensive having success is a borderline fantasy. It'll at most help pin the Italians back while we mobiblize more men. At the cost of large amount of Ethiopian lives..."
  ethiopia.2.a:0 "God save us..."
- ethiopia.2.t:0 "Second major offensive"
- ethiopia.2.d:0 "The general staff have come to the conclusion that the time has come for a second major Counter-offesive. That we might have a chance to finally break though Italian lines"
- ethiopia.2.a:0 "Push the interlopers back into the sea!"
+ ethiopia.3.t:0 "Second major offensive"
+ ethiopia.3.d:0 "The general staff have come to the conclusion that the time has come for a second major Counter-offesive. That we might have a chance to finally break though Italian lines"
+ ethiopia.3.a:0 "Push the interlopers back into the sea!"
  ethiopia.3.t:0 "Viking Tamm offers to help command in the field"
  ethiopia.3.d:0 "Viking Tamm has apporach the general staff with the proposal that his services would be better used if he where to command our army's in the field rather then sit in Addis and advise the general staff."
  ethiopia.3.a:0 "No! We need your help advising the general staff!"
@@ -180,7 +188,7 @@ ETH_support_from_HOL:0 "Ask for help from the Dutch"
  news.336.d:0 "It was revealed to the press in the last few hours that though diplomatic back channels, that Ethiopian diplomats under Selassie orders met with the Italian League of Nations representative in Geneva. Where they agreed to terms of surrender. Using the basis of the leaked Hoare-Laval Pact as a starting point for negations. The Italian Parliament, and Fascist Party leadership overwhelming approved of the treaty. Ethiopia would be put under Italian control, but retrain indepence of local, and tribal matters. Haile Selassie caving to Italian pressure has come to a great alarm to the international community. As this may set a bad precedent to the world as other nations with sights set beyond their borders might see that the most nations can no longer entertain the thought of going to war and would rather appease aggressors than stand up to them. "
  news.336.a:0 "I hope 'appeasement' doesn't become a trend"
 
-#Hoare-Laval Pact
+#Hoare-Laval Pact Itlay side
 
  ethiopiadeal.1.t:0 "The Geneva agreement"
  ethiopiadeal.1.d:0 "It was revealed to them that though diplomatic back channels that Ethiopian diplomats under Selassie orders met with the Italian League of Nations representative in Geneva. Where they agreed to terms of surrender. Using the basis of the leaked Hoare-Laval Pact as a starting point for negations. The Italian Parliament, and Fascist Party leadership overwhelming above of the treaty. Ethiopia would be put under Italian control, but retrain indepence of local, and tribal matters. One of Haile Selassie demands was for the Italian government to have a member the Italian royal family appointed to leader of the country as to abide by the countries customs. The Italian Royal household agreed to this and have given Prince Amedeo, Duke of Aosta the honor. His was given the new title of Amedeo Giovanni I, King of Ethiopia."
