@@ -18,29 +18,33 @@ ideas = {
 			modifier = {
 				research_time_factor = 0.99
 				production_speed_buildings_factor = -0.99
-
-			}
+				industrial_capacity_factory = -0.09
+		}
 	}
 	#Irregular military#
 	not_ready = {
 		allowed = { original_tag = ETH	}
 		allowed_civil_war = { always = no }
 		removal_cost = -1
-		picture = prc_low_popular_support
-			
-			modifier = {
-				experience_gain_army = -0.01
-				army_org_Factor = -0.08
-			}
-	}
-	viking_tahm = {
-		allowed = { original_tag = ETH	}
-		allowed_civil_war = { always = no }
-		removal_cost = -1
 		picture = chi_army_corruption2
 			
 			modifier = {
-				recon_factor = 0.05
+				experience_gain_army = -0.01
+				army_speed_factor = -0.08
+				army_org_Factor = -0.08
+			}
+	}
+	ETH_sweedish_mission = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = prc_low_popular_support
+			
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = ETH_viking_tamm
+
+			modifier = {
+				max_planning = 0.10
 			}
 	}
 ########################
@@ -326,6 +330,10 @@ modernize_1 = {
 			
 			allowed = {
 				original_tag = ETH
+			}
+
+			available = {	
+				NOT = { has_idea = not_ready }
 			}		
 			
 			traits = { army_chief_organizational_2 }
@@ -342,9 +350,36 @@ modernize_1 = {
 			allowed = {
 				original_tag = ETH
 			}
+			available = {	
+				NOT = { has_idea = not_ready }
+			}
 			
 			traits = { army_chief_defensive_2 }
 			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	    ETH_wehib_pasha_d = {
+
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = ETH
+			}
+			available = {	
+				has_completed_focus = ETH_hire_pasha
+				NOT = { has_idea = ETH_wehib_pasha }
+					}
+
+			traits = { army_chief_defensive_2 }
+
+			modifier = {
+				max_dig_in = 5
+			}
+
+			cost = 25
+
 			ai_will_do = {
 				factor = 1
 			}
@@ -360,6 +395,10 @@ modernize_1 = {
 			allowed = {
 				original_tag = ETH
 			}
+
+			available = {	
+				NOT = { has_idea = not_ready }
+			}
 			
 			traits = { air_chief_reform_2 }
 			
@@ -374,6 +413,10 @@ modernize_1 = {
 			
 			allowed = {
 				original_tag = ETH
+			}
+
+			available = {	
+				NOT = { has_idea = not_ready }
 			}
 			
 			traits = { air_chief_ground_support_2 }
@@ -394,6 +437,10 @@ modernize_1 = {
 			allowed = {
 				original_tag = ETH
 			}
+
+			available = {	
+				NOT = { has_idea = not_ready }
+			}
 					
 			traits = { navy_chief_commerce_raiding_2 }
 			
@@ -408,6 +455,10 @@ modernize_1 = {
 			
 			allowed = {
 				original_tag = ETH
+			}
+
+			available = {	
+				NOT = { has_idea = not_ready }
 			}
 					
 			traits = { navy_chief_maneuver_2 }
@@ -431,6 +482,11 @@ modernize_1 = {
 			{	
 				has_completed_focus = ETH_hire_pasha
 				NOT = { has_idea = ETH_guglielmo_nasi }
+				NOT = { has_idea = ETH_wehib_pasha_d }
+			}
+
+			modifier = {
+				max_dig_in = 1
 			}
 
 			traits = { army_infantry_2 }
@@ -450,9 +506,34 @@ modernize_1 = {
 			allowed = {
 				original_tag = ETH
 			}
+
+			available = {	
+				NOT = { has_idea = not_ready }
+			}
 			
 			traits = { army_regrouping_2 }
 			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ETH_viking_tamm = {
+			
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = ETH
+			}
+
+			available = {	
+				has_idea = ETH_sweedish_mission
+			}
+			
+			traits = { army_entrenchment_1 }
+			
+			cost = 0
+
 			ai_will_do = {
 				factor = 1
 			}
@@ -492,6 +573,10 @@ modernize_1 = {
 			allowed = {
 				original_tag = ETH
 			}
+
+			available = {	
+				NOT = { has_idea = not_ready }
+			}
 			
 			traits = { army_armored_2 }
 			
@@ -508,6 +593,10 @@ modernize_1 = {
 				original_tag = ETH
 			}
 			
+			available = {	
+				NOT = { has_idea = not_ready }
+			}
+
 			traits = { air_close_air_support_2 }
 			
 			ai_will_do = {
@@ -521,6 +610,10 @@ modernize_1 = {
 			
 			allowed = {
 				original_tag = ETH
+			}
+
+			available = {	
+				NOT = { has_idea = not_ready }
 			}
 			
 			traits = { navy_capital_ship_2 }

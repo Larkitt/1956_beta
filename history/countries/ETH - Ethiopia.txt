@@ -35,6 +35,9 @@ add_ideas = {
 		#ideas
 		not_ready
 		backwards
+		ETH_sweedish_mission
+		#adviors
+		ETH_viking_tamm
 }
 
 set_convoys = 5

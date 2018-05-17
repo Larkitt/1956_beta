@@ -1,8 +1,9 @@
-﻿###ETH FOCUS TREE###
+###ETH FOCUS TREE###
 
 ###Created by SpicyAlfredo###
 
 focus_tree = {
+
 	id = eth_focus
 	country = {
 		factor = 0
@@ -755,7 +756,7 @@ focus = {
 			unlock_decision_category_tooltip = ETH_formable_nations
 			}
 	}
-		focus = {
+	focus = {
 		id = ETH_hire_pasha 
 		icon = GFX_goal_generic_construction2
 		#text = "Urban Factories"
@@ -778,6 +779,8 @@ focus = {
 		completion_reward = {
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = ETH_wehib_pasha
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = ETH_wehib_pasha_d
 		}
 	}
 	focus = {
@@ -1094,6 +1097,8 @@ focus = {
 					news_event = { hours = 24 id = news.336 }
 					hidden_effect = {
 					add_ideas = choosen_path
+					remove_ideas = ETH_wehib_pasha
+					remove_ideas = ETH_wehib_pasha_d
 								}			
 			}
 		}
@@ -1142,4 +1147,4 @@ focus = {
 				
 								}			
 						}
-	}
+}

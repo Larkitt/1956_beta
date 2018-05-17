@@ -14,7 +14,7 @@
  christmas_offensive:0 "The Christmas Offensive"
  ETH_home_defense:0 "Defense of the Homeland"
  not_ready:0 "Irregular military"
- not_ready_desc:0 "The Noble's fear of a having standing regular army may have been their foil. Most of our divisions aren’t fully trained in modern tactics or are even drilled. The officers who run our military are noblemen who do not know a thing about fighting tactics after 1896, nor have a spec of leadership. Western Nations have generously gifted us modern equipment. Yet most of our military doesn’t know how to use it!"
+ not_ready_desc:0 "The Noble's fear of a having standing regular army may have been their foil. Most of our divisions aren’t fully trained in modern tactics or are even drilled. The officers who run our military are noblemen who do not know a thing about fighting tactics after 1896, nor have a spec of leadership. Western Nations have generously gifted us modern equipment. Yet most of our military doesn’t know how to use it! \n\n§ While we have this idea we cannot appoint native military advisors.§!"
  choosen_path:0 "The Path we choose"
  second_italo_ethiopian_war:0 "Second Italian Ethiopia War"
  modernize_1:0 "Modernizing the Nation"
@@ -22,22 +22,25 @@
  ETH_black_lions:0 "The Black Lions"
  ETH_black_lions_desc:0 "The 'Black Lions' where anti-fascist resistance movement formed to fight against Italy during the occupation of the Ethiopia."
  ETH_hold:0 "Hold the Line!"
-
+ ETH_sweedish_mission:0 "Sweedish Military Mission"
+ ETH_sweedish_mission_desc:0 "There is a attachment of Sweedish officers who are advising our officers. \n\n§ This idea grants us a free Military High C ommand advisor - 'Viking Tamm' §!"
 #threats
 
 italo_ethiopian_pact:0 "Hoare Laval Pact"
 
-#adviors
+#advisors
 
  ETH_wehib_pasha:0 "Wehib Pasha"
+ ETH_wehib_pasha_d:0 "Wehib Pasha"
  ETH_georges_deffontaine:0 "Oscar Michiels"
  ETH_guglielmo_nasi:0 "Guglielmo Nasi"
+ ETH_viking_tamm:0 "Viking Tamm"
 
 #decisions
 
 ETH_formable_nations:0 "The Ferenghi"
 ETH_support_from_HOL:0 "Ask for help from the Dutch"
-ETH_hire_pasha:0 "Hire Wehib Pasha"
+
  
 #National focus
 
