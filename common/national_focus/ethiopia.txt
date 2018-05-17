@@ -1,4 +1,4 @@
-###ETH FOCUS TREE###
+﻿###ETH FOCUS TREE###
 
 ###Created by SpicyAlfredo###
 
@@ -22,7 +22,7 @@ default = no
 focus = {
 		id = ETH_steelworks
 		icon = GFX_focus_generic_steel
-		available = { has_idea = choosen_path
+		available = { has_idea = modernize_1
 		271 = {is_owned_by = ETH} 
 					}
 		x = 2
@@ -264,7 +264,7 @@ focus = {
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = ETH_civ }
 		#text = "Land DEVELOPMENT"
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = ETH_civ 
 		cost = 10
@@ -302,11 +302,11 @@ focus = {
 focus = {
 		id = ETH_steel_industry
 		icon = GFX_focus_generic_steel
-		prerequisite = { focus = ETH_silk_road_test }
+		prerequisite = { focus = ETH_civ }
 		#text = "Land DEVELOPMENT"
-		x = 0
+		x = 1
 		y = 1
-		relative_position_id = ETH_silk_road_test 
+		relative_position_id = ETH_civ
 		cost = 10
 		ai_will_do = {
 			factor = 70
@@ -322,7 +322,7 @@ focus = {
 focus = {
 		id = ETH_rare_metals
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = ETH_steel_industry }
+		prerequisite = { focus = ETH_steel_industry focus = ETH_silk_road_test }
 		mutually_exclusive = { focus = ETH_oil_industry }
 		#text = "Land DEVELOPMENT"
 		x = -1
@@ -353,7 +353,7 @@ focus = {
 focus = {
 		id = ETH_oil_industry
 		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = ETH_steel_industry }
+		prerequisite = { focus = ETH_steel_industry focus = ETH_silk_road_test }
 		mutually_exclusive = { focus = ETH_rare_metals }
 		#text = "Land DEVELOPMENT"
 		x = 1
@@ -752,14 +752,11 @@ focus = {
 		}
 		completion_reward = {
 			add_ideas = ETH_swedish_red_cross
-			custom_effect_tooltip = available_military_high_command
-			show_ideas_tooltip = ETH_wehib_pasha
-			country_event = { id =  ethiopia.3 hours = 8 }
-
+			unlock_decision_category_tooltip = ETH_formable_nations
 			}
 	}
 		focus = {
-		id = ETH_help
+		id = ETH_hire_pasha 
 		icon = GFX_goal_generic_construction2
 		#text = "Urban Factories"
 		#available = {	}
@@ -767,7 +764,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = ETH_ferenghi
-		cost = 5
+		cost = 2
 		available = {
 			has_idea = second_italo_ethiopian_war
 			country_exists = ITA
@@ -779,9 +776,8 @@ focus = {
 		factor = 0.6
 		}
 		completion_reward = {
-			add_manpower = 300
-			add_ideas = ETH_help_idea 
-			
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = ETH_wehib_pasha
 		}
 	}
 	focus = {
@@ -789,10 +785,10 @@ focus = {
 		icon = GFX_goal_generic_construction2
 		#text = "Urban Factories"
 		#available = { 	}
-		prerequisite = { focus = ETH_help }
+		prerequisite = { focus = ETH_hire_pasha }
 		x = 0
 		y = 1
-		relative_position_id = ETH_help
+		relative_position_id = ETH_hire_pasha
 		cost = 10
 		available = {
 			has_idea = second_italo_ethiopian_war
@@ -805,6 +801,8 @@ focus = {
 		factor = 5
 		}
 		completion_reward = {
+
+
 
 		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 1000 producer = GER }
 			
@@ -937,7 +935,7 @@ focus = {
 			BEL = {	add_opinion_modifier = { target = ITA modifier = unprovoked_aggression } }
 			RAJ = {	add_opinion_modifier = { target = ITA modifier = unprovoked_aggression } }
 			SAF = {	add_opinion_modifier = { target = ITA modifier = unprovoked_aggression } }
-			NZF = {	add_opinion_modifier = { target = ITA modifier = unprovoked_aggression } }
+			NZL = {	add_opinion_modifier = { target = ITA modifier = unprovoked_aggression } }
 			FIN = {	add_opinion_modifier = { target = ITA modifier = unprovoked_aggression } }
 			LIT = {	add_opinion_modifier = { target = ITA modifier = unprovoked_aggression } }
 			DEN = {	add_opinion_modifier = { target = ITA modifier = unprovoked_aggression } }
@@ -980,9 +978,6 @@ focus = {
 		ai_will_do = {	factor = 10 }	
 		completion_reward = {
 			add_named_threat = { threat = -3 name = italo_ethiopian_war }
-			remove_ideas = second_italo_ethiopian_war
-			remove_ideas = ETH_hold_the_line
-			remove_ideas = ETH_swedish_red_cross
 			add_ideas = ETH_lion_roar_focus_lesser
 			ITA = { 
 				add_opinion_modifier = { target = ETH modifier = large_decrease }
@@ -990,6 +985,22 @@ focus = {
 			ETH = {
 				country_event = { id = ethiopia.5 days = 1 }
 				}
+			hidden_effect = { 
+			remove_ideas = second_italo_ethiopian_war
+			remove_ideas = christmas_offensive
+			remove_ideas = ETH_resistance_1
+			remove_ideas = ETH_resistance_2
+			remove_ideas = ETH_resistance_3
+			remove_ideas = ETH_resistance_4
+			remove_ideas = ETH_resistance_5
+			remove_ideas = ETH_resistance_6
+			remove_ideas = ETH_resistance_7
+			remove_ideas = ETH_national_mobilization
+			remove_ideas = ETH_home_defense
+			remove_ideas = ETH_hold
+			remove_ideas = ETH_second_idea
+			remove_ideas = ETH_alone
+			}
 		}
 	}
 	focus = { 
@@ -998,11 +1009,10 @@ focus = {
 		prerequisite = { focus = ETH_war_of_resistance }
 		relative_position_id = ETH_war_of_resistance
 		available = {
-			country_exists = ITA
 			country_exists = ETH
-			ETH = { controls_state = 271}
-			ITA = { has_war_with = ETH }
-					}		
+			has_idea = choosen_path
+			ETH = { controls_state = 271}	
+			}
 			x = 0
 			y = 5
 			cost = 2
@@ -1019,21 +1029,45 @@ focus = {
 		prerequisite = { focus = ETH_lions }
 		relative_position_id = ETH_war_of_resistance
 		available = {
-			country_exists = ITA
 			country_exists = ETH
-			ETH = { controls_state = 271}
+			has_idea = ETH_lions
+
+			ETH = {
+			 controls_state = 271
+    		 controls_state = 550
+			 controls_state = 559
+			}
+
 			NOT = {
 				ITA = { has_war_with = ETH }
 				has_idea = second_italo_ethiopian_war
 				   }
 			} 		
 			x = 0
-			y = 5
+			y = 9
 			cost = 2
 			ai_will_do = {	factor = 0 }
 
-			completion_reward = { add_ideas = ETH_black_lions }
+			completion_reward = { 
+			add_ideas = victors
+			hidden_effect = { 
+			remove_ideas = second_italo_ethiopian_war
+			remove_ideas = christmas_offensive
+			remove_ideas = ETH_resistance_1
+			remove_ideas = ETH_resistance_2
+			remove_ideas = ETH_resistance_3
+			remove_ideas = ETH_resistance_4
+			remove_ideas = ETH_resistance_5
+			remove_ideas = ETH_resistance_6
+			remove_ideas = ETH_resistance_7
+			remove_ideas = ETH_national_mobilization
+			remove_ideas = ETH_home_defense
+			remove_ideas = ETH_hold
+			remove_ideas = ETH_second_idea
+			remove_ideas = ETH_alone
+			}
 		}
+	}
 #######################
 #######################
 #Selling out to Italy##
@@ -1042,7 +1076,7 @@ focus = {
 	focus = { 
 		id = ETH_Hoare_Laval_Pact
 		icon = GFX_goal_generic_dangerous_deal
-		mutually_exclusive = { focus = ETH_war_of_resistance }
+		mutually_exclusive = { focus = ETH_war_of_resistance focus = ETH_defeated }
 		available = {
 			country_exists = ITA
 			country_exists = ETH
@@ -1056,6 +1090,7 @@ focus = {
 
 			completion_reward = {
 					country_event = { id = ethiopia.1 }  
+					add_named_threat = { threat = 1 name = italo_ethiopian_pact }
 					news_event = { hours = 24 id = news.336 }
 					hidden_effect = {
 					add_ideas = choosen_path
@@ -1066,22 +1101,45 @@ focus = {
 		id = ETH_consolated
 		icon = GFX_goal_generic_dangerous_deal
 			prerequisite = { focus = ETH_Hoare_Laval_Pact }
+			relative_position_id = ETH_Hoare_Laval_Pact
 		available = {
 			country_exists = ITA
 			country_exists = ETH
-			ETH = { controls_state = 271}		
+			ETH = { controls_state = 271}
+			}		
 			x = 0
 			y = 1
-			relative_position_id = ETH_Hoare_Laval_Pact
 			cost = 1
 			ai_will_do = {	factor = 0 }
 
 			completion_reward = {
-					country_event = { id = ethiopia.1 }  
-					news_event = { hours = 24 id = news.336 }
-					hidden_effect = {
-					add_ideas = choosen_path
+				add_ideas = modernize_1
 								}			
-			}
-		}  
-}
+						}
+#######################
+#######################
+# Defeated and Shamed #
+#######################
+#######################  
+ 	focus = { 
+		id = ETH_defeated
+		icon = GFX_goal_generic_dangerous_deal
+			mutually_exclusive = { focus = ETH_Hoare_Laval_Pact }
+		available = {
+			country_exists = ITA
+			ETH = {
+			 controls_state = 271 
+			 is_puppet_of = ITA  
+				  }
+			has_idea = choosen_path
+			}		
+			x = 22
+			y = 0
+			cost = 1
+			ai_will_do = {	factor = 0 }
+
+			completion_reward = {
+				
+								}			
+						}
+	}

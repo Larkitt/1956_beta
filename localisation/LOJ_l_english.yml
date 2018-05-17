@@ -1,5 +1,6 @@
 ﻿l_english:
  #ideas
+
  backwards:0 "Pre-Industrial society"
  backwards_desc:0 "Ethiopia is a country that is stuck in old tradition. This has made our country relante on a agrarian economy. Although attempts had been made to try to catch up and industrialize our country. In the grand scale of things these efforts have been futile."
  ETH_resistance_1:0 "War against Imperialism"
@@ -13,7 +14,7 @@
  christmas_offensive:0 "The Christmas Offensive"
  ETH_home_defense:0 "Defense of the Homeland"
  not_ready:0 "Irregular military"
- not_ready_desc:0 "The Noble's fear of a having standing regular army may have been their foil. Most of our divisions aren’t fully trained in modern tactics or are even drilled. The officers who run are military are noblemen who do not know a thing about fighting tactics after 1896, nor have a spec of leadership. Western Nations have generously gifted us modern equipment. Yet most of our military doesn’t know how to use it!"
+ not_ready_desc:0 "The Noble's fear of a having standing regular army may have been their foil. Most of our divisions aren’t fully trained in modern tactics or are even drilled. The officers who run our military are noblemen who do not know a thing about fighting tactics after 1896, nor have a spec of leadership. Western Nations have generously gifted us modern equipment. Yet most of our military doesn’t know how to use it!"
  choosen_path:0 "The Path we choose"
  second_italo_ethiopian_war:0 "Second Italian Ethiopia War"
  modernize_1:0 "Modernizing the Nation"
@@ -22,12 +23,24 @@
  ETH_black_lions_desc:0 "The 'Black Lions' where anti-fascist resistance movement formed to fight against Italy during the occupation of the Ethiopia."
  ETH_hold:0 "Hold the Line!"
 
+#threats
+
+italo_ethiopian_pact:0 "Hoare Laval Pact"
+
 #adviors
 
  ETH_wehib_pasha:0 "Wehib Pasha"
  ETH_georges_deffontaine:0 "Oscar Michiels"
+ ETH_guglielmo_nasi:0 "Guglielmo Nasi"
+
+#decisions
+
+ETH_formable_nations:0 "The Ferenghi"
+ETH_support_from_HOL:0 "Ask for help from the Dutch"
+ETH_hire_pasha:0 "Hire Wehib Pasha"
  
 #National focus
+
  ETH_Hoare_Laval_Pact:0 "Agree to the Hoare Laval Pact"
  ETH_war_of_resistance:0 "The Christmas Offensive"
 
@@ -140,6 +153,7 @@
  ETH_german_design_desc:0 "Using the guns Germany has supplied us, we are able to reverse engineer their designs"
  
 #news
+
  ethiopia.1.t:0 "Haile Selassie agrees to the terms of the Hoare Laval Pact"
  ethiopia.1.d:0 "There was scenes today when Haile Selassie met with other members of the Ethiopian royal family. It was revealed to them that though diplomatic back channels that diplomats under Selassie orders agreed to terms of surrender with the Italian government. Using the basis of the leaked Hoare-Laval Pact as a starting point for negations. Ethiopia would be put under Italian control, but retrain indepence of local, and tribal matters. One of Haile Selassie demands was for the Italian government to have a member the Italian royal family appointed to leader of the country as to abide by the countries customs. The Italian Royal household agreed and have given Prince Amedeo, Duke of Aosta the honor. His was given the new title of Amedeo Giovanni I, King of Ethiopia. "
  ethiopia.1.a:0 "It was the only way..."
@@ -155,13 +169,16 @@
  ethiopia.3.b:0 "Yes! We despratly need you on the front lines!"
 
 #worldevents
+
  news.335.t:0 "Ethiopia plees to the League of Nations"
  news.335.d:0 "The signatories consider it as the condition precedent of any lasting peace that all nations in the world be given each its own proper place, have decided to stand by and co-operate with one another in their efforts to condemn the senseless bloodshed and rank imperialism of the Italy in East Africa and the regions of the continent respectively wherein it is their prime purpose to establish and maintain a new order of things, calculated to promote the mutual prosperity and welfare of the peoples concerned. Though they the nations who signed this statement don't back these words with actions, and let Italy violate Article X of the League of Nations with their invasion of Ethiopia. Without intervention on it's behalf it's likely that Ethiopia will fall to Italian forces within the year."
  news.335.a:0 "Ethiopia stands alone"
  news.336.t:0 "The Geneva agreement"
  news.336.d:0 "It was revealed to the press in the last few hours that though diplomatic back channels, that Ethiopian diplomats under Selassie orders met with the Italian League of Nations representative in Geneva. Where they agreed to terms of surrender. Using the basis of the leaked Hoare-Laval Pact as a starting point for negations. The Italian Parliament, and Fascist Party leadership overwhelming approved of the treaty. Ethiopia would be put under Italian control, but retrain indepence of local, and tribal matters. Haile Selassie caving to Italian pressure has come to a great alarm to the international community. As this may set a bad precedent to the world as other nations with sights set beyond their borders might see that the most nations can no longer entertain the thought of going to war and would rather appease aggressors than stand up to them. "
  news.336.a:0 "I hope 'appeasement' doesn't become a trend"
+
 #Hoare-Laval Pact
+
  ethiopiadeal.1.t:0 "The Geneva agreement"
  ethiopiadeal.1.d:0 "It was revealed to them that though diplomatic back channels that Ethiopian diplomats under Selassie orders met with the Italian League of Nations representative in Geneva. Where they agreed to terms of surrender. Using the basis of the leaked Hoare-Laval Pact as a starting point for negations. The Italian Parliament, and Fascist Party leadership overwhelming above of the treaty. Ethiopia would be put under Italian control, but retrain indepence of local, and tribal matters. One of Haile Selassie demands was for the Italian government to have a member the Italian royal family appointed to leader of the country as to abide by the countries customs. The Italian Royal household agreed to this and have given Prince Amedeo, Duke of Aosta the honor. His was given the new title of Amedeo Giovanni I, King of Ethiopia."
  ethiopiadeal.1.a:0 "Well...That was easy"

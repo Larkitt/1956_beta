@@ -52,20 +52,37 @@ second_italo_ethiopian_war = {
 		allowed_civil_war = { always = yes }
 		removal_cost = -1
 		picture = hun_secret_rearmament
+		modifier = {
+				war_support_weekly = 0.01
+				}
 			}
 choosen_path = {
 		allowed = { original_tag = ETH	}
 		allowed_civil_war = { always = yes }
 		removal_cost = -1
 		picture = prc_the_long_march2
+			modifier = {
+				stability_factor = 0.01
+				}
+			}
+victors = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = chi_war_of_resistance
+		modifier = {
+		stability_factor = 0.05
+					}
 			}
 modernize_1 = {
 		allowed = { original_tag = ETH	}
 		allowed_civil_war = { always = yes }
 		removal_cost = -1
 		picture = chi_war_of_resistance
+		modifier = {
 		research_time_factor = -0.01
 		production_speed_buildings_factor = 0.01
+				}
 			}
 
 ########################
@@ -229,6 +246,17 @@ modernize_1 = {
 			army_speed_factor = 0.1
 			}
 		}
+	ETH_swedish_red_cross = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = chi_war_of_resistance3
+			
+			modifier = {
+			casualty_trickleback = 0.10
+			experience_loss_factor = -0.05
+			}
+		} 
 	#League of Nations Abandonment#
 	ETH_alone = {
 		allowed = { original_tag = ETH	}
@@ -400,12 +428,18 @@ modernize_1 = {
 				original_tag = ETH	
 			}
 			available =  
-			{
-				NOT = { has_country_flag = purge_1_group_b }	
-				has_completed_focus = ETH_ferenghi
+			{	
+				has_completed_focus = ETH_hire_pasha
+				NOT = { has_idea = ETH_guglielmo_nasi }
 			}
 
 			traits = { army_infantry_2 }
+
+			cost = 25
+
+			ai_will_do = {
+				factor = 1
+			}
 			
 		}
 
@@ -424,15 +458,27 @@ modernize_1 = {
 			}
 		}
 		
-		ETH_haile_abba_mersa = {
+		ETH_guglielmo_nasi = {
 
-			picture = generic_army_arab_3
+			picture = generic_army_europe_2
 			
 			allowed = {
 				original_tag = ETH
 			}
 			
-			traits = { army_infantry_2 }
+			available = 
+			{	
+				has_completed_focus = ETH_Hoare_Laval_Pact
+				NOT = { has_idea = ETH_wehib_pasha }
+			}
+
+			modifier = {
+				supply_consumption_factor = -0.01
+			}
+
+			traits = { army_infantry_1 }
+
+			cost = 75
 			
 			ai_will_do = {
 				factor = 1
