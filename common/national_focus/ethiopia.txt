@@ -19,23 +19,44 @@ default = no
 ###### INDUSTRY ########
 ########################
 ########################
-
 focus = {
-		id = ETH_steelworks
+		id = ETH_fiveyear
 		icon = GFX_focus_generic_steel
-		available = { has_idea = modernize_1
-		271 = {is_owned_by = ETH} 
+		available = { 
+			has_idea = modernize_1
+			271 = {is_owned_by = ETH} 
 					}
 		x = 2
 		y = 0
-		cost = 5
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			remove_ideas = backwards
+			hidden_effect = {
+						country_event = { id = ethiopia.2 hours = 6 }
+							}
+					}
+		}
+focus = {
+		id = ETH_steelworks
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = ETH_fiveyear }
+		available = { has_idea = modernize_1
+		271 = {is_owned_by = ETH} 
+					}
+		x = 0
+		y = 1
+		relative_position_id = ETH_fiveyear
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}	
 		completion_reward = {
 			add_tech_bonus = {
 				name = industrial_bonus
-				bonus = 1
+				bonus = 0.50
 				uses = 1
 				category = industry
 			}
@@ -47,11 +68,7 @@ focus = {
 					instant_build = yes
 					}
 				}
-			hidden_effect = {
-						remove_ideas = christmas_offensive
-						country_event = { id = ethiopia.2 hours = 6 }
-							}
-					}
+			}
 		}
 focus = {
 		id = ETH_urban_factories
@@ -74,6 +91,7 @@ focus = {
 					instant_build = yes
 					}
 				}
+				
 			}
 		}
 focus = {

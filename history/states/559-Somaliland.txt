@@ -11,11 +11,17 @@ state=
 		victory_points = {
 			12991 3 
 		}
+		victory_points = {
+			12941 1
+		}
 		buildings = {
 			infrastructure = 3
 			air_base = 1
 			12941 = {
 				naval_base = 2
+			}
+			12991 = {
+				naval_base = 1
 			}
 		}
 		add_core_of = SOM

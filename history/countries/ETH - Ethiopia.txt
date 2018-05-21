@@ -14,7 +14,6 @@ set_technology = {
 	camo = 1
 	gw_armored_car = 1
 	steel_production_1 = 1
-	
 	infantry_weapons = 1
 	tech_mountaineers = 1
 	early_fighter = 1
@@ -36,6 +35,7 @@ add_ideas = {
 		not_ready
 		backwards
 		ETH_sweedish_mission
+		ETH_gap
 		#adviors
 		ETH_viking_tamm
 }

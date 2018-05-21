@@ -26,7 +26,7 @@ ideas = {
 		allowed = { original_tag = ETH	}
 		allowed_civil_war = { always = no }
 		removal_cost = -1
-		picture = chi_army_corruption2
+		picture = chi_forced_conscription
 			
 			modifier = {
 				experience_gain_army = -0.01
@@ -45,6 +45,21 @@ ideas = {
 				max_planning = 0.10
 			}
 	}
+	ETH_gap = {
+		allowed = { original_tag = ETH	}
+		allowed_civil_war = { always = no }
+		removal_cost = -1
+		picture = chi_army_corruption
+			
+
+			modifier = {
+					out_of_supply_factor = -0.1
+					army_defence_factor = -0.1
+					winter_attrition_factor = 1
+					
+			}
+	}
+
 ########################
 #####Check Ideas########
 ########################
@@ -53,7 +68,7 @@ second_italo_ethiopian_war = {
 		allowed = { original_tag = ETH	}
 		allowed_civil_war = { always = yes }
 		removal_cost = -1
-		picture = hun_secret_rearmament
+		picture = FRA_scw_intervention_nationalist_focus
 		modifier = {
 				war_support_weekly = 0.01
 				}
@@ -131,7 +146,7 @@ modernize_1 = {
 		allowed = { original_tag = ETH	}
 		allowed_civil_war = { always = no }
 		removal_cost = -1
-		picture = yug_federal_defense_council
+		picture = generic_production_bonus
 			
 			modifier = {
 				consumer_goods_factor = -1	
@@ -231,17 +246,18 @@ modernize_1 = {
 		allowed = { original_tag = ETH	}
 		allowed_civil_war = { always = no }
 		removal_cost = -1
-		picture = chi_war_of_resistance3
+		picture = generic_fortify_the_borders
 			
 			modifier = {
 				army_core_defence_factor = 0.50
+				max_dig_in = 30
 			}
 		}
 	ETH_second_idea = {
 		allowed = { original_tag = ETH	}
 		allowed_civil_war = { always = no }
 		removal_cost = -1
-		picture = chi_war_of_resistance3
+		picture = generic_intel_bonus
 			
 			modifier = {
 			army_attack_factor = 0.5
@@ -252,7 +268,7 @@ modernize_1 = {
 		allowed = { original_tag = ETH	}
 		allowed_civil_war = { always = no }
 		removal_cost = -1
-		picture = chi_war_of_resistance3
+		picture = generic_morale_bonus
 			
 			modifier = {
 			experience_loss_factor = -0.1
@@ -262,24 +278,24 @@ modernize_1 = {
 		allowed = { original_tag = ETH	}
 		allowed_civil_war = { always = no }
 		removal_cost = -1
-		picture = chi_war_of_resistance3
+		picture = FRA_army_of_aggression_focus
 			
 			modifier = {
-			
 			army_speed_factor = 0.1
 			supply_consumption_factor = -0.05
+			army_attack_factor = 0.05
 			}
 		}
-	ETH_infiltration_idea_1 = {
+	ETH_infiltration_idea_2 = {
 		allowed = { original_tag = ETH	}
 		allowed_civil_war = { always = no }
 		removal_cost = -1
-		picture = chi_war_of_resistance3
+		picture = FRA_army_of_aggression_focus
 			
 			modifier = {
-			
-			army_speed_factor = 0.15
-			supply_consumption_factor = -0.10
+			army_speed_factor = 0.1
+			supply_consumption_factor = -0.1
+			army_attack_factor = 0.1
 			}
 		}
 	#League of Nations Abandonment#
@@ -294,8 +310,7 @@ modernize_1 = {
 			democratic_acceptance = -25
 			}
 		}
-	#Help for the outside#
-
+	#Help from the outside#
 	ETH_BEL_help = {
 		allowed = { original_tag = ETH	}
 		allowed_civil_war = { always = no }
@@ -318,7 +333,7 @@ modernize_1 = {
 			max_planning = 0.01
 			}
 		}
-
+	#The Lion of Judiah#
 	ETH_black_lions = {
 		allowed = { original_tag = ETH	}
 		allowed_civil_war = { always = no }
@@ -331,7 +346,107 @@ modernize_1 = {
 			army_infantry_defence_factor = 0.01
 			}
 		}
+	################################
+	##### Hyper inflation level ####
+	################################
+
+		ETH_hyper_inflation_none = {
+
+			picture = chi_hyper_inflation
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+
+			}
+		}
+
+		ETH_hyper_inflation_1 = {
+
+			picture = chi_hyper_inflation
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.05
+			}
+		}
+
+		
+		ETH_hyper_inflation_2 = {
+
+			picture = chi_hyper_inflation2
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				industrial_capacity_factory = -0.10
+			}
+		}
+		
+		ETH_hyper_inflation_3 = {
+
+			picture = chi_hyper_inflation3
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.15
+			}
+		}
+		
+		ETH_hyper_inflation_4 = {
+
+			picture = chi_hyper_inflation4
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.20
+				industrial_capacity_factory = -0.20
+			}
+		}
  }
+
 	political_advisor = {
 
 		ETH_bedjironde_tekle_hawariate = {
@@ -366,28 +481,38 @@ modernize_1 = {
 			
 			traits = { smooth_talking_charmer }
 		}
-	}
+		ETH_selassie_gugsa = {
 
-	army_chief = {
-
-		ETH_desta_damtew = {
-
-			picture = generic_army_arab_2
+			picture = generic_political_advisor_arab_3
 			
 			allowed = {
 				original_tag = ETH
 			}
-
 			available = {	
-				NOT = { has_idea = not_ready }
-			}		
-			
-			traits = { army_chief_organizational_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
+				has_completed_focus = ETH_defeated
+				NOT = {
+				 has_completed_focus = ETH_lessons 
+				 	}
+				}		
+			traits = { backroom_backstabber }
 		}
+		ETH_abebe_aregai = {
+
+			picture = generic_political_advisor_arab_3
+			
+			allowed = {
+				original_tag = ETH
+			}
+			available = {	
+				NOT = {
+				 has_completed_focus = ETH_defeated 
+				 	}
+				}		
+			traits = { staunch_monarchist }
+		}
+	}
+
+	army_chief = {
 
 		ETH_ras_kassa = {
 
@@ -401,6 +526,23 @@ modernize_1 = {
 			}
 			
 			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		ETH_kebedech_seyoum = {
+
+			picture = generic_army_arab_1
+			
+			allowed = {
+				original_tag = ETH
+			}
+			available = {	
+				NOT = { has_idea = not_ready }
+			}
+			
+			traits = { army_chief_offensive_2 }
 			
 			ai_will_do = {
 				factor = 1
@@ -514,7 +656,45 @@ modernize_1 = {
 			}
 		}
 	}
+	theorist = {
+		ETH_carlo_geloso= {
+		
+			picture = generic_army_arab_2
 
+			allowed = {
+				original_tag = HUN
+			}
+			available = {	
+				has_completed_focus = ETH_Hoare_Laval_Pact
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		ETH_desta_damtew = {
+		
+			picture = generic_army_europe_2
+
+			allowed = {
+				original_tag = HUN
+			}
+			available = {	
+				has_completed_focus = ETH_lessons
+				NOT = { has_idea = not_ready 
+						has_completed_focus = ETH_defeated
+					}
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+	}
 	high_command = {
 	
 		ETH_wehib_pasha = {

@@ -28,6 +28,7 @@ country_event = {
 			}
 		}
 	}
+
 country_event = {
 	id = ethiopia.2
 	title = ethiopia.2.t
@@ -41,5 +42,19 @@ country_event = {
 			}
 	
 	option = { name = ethiopia.2.a }		
+}
+country_event = {
+	id = ethiopia.3
+	title = ethiopia.3.t
+	desc = ethiopia.3.d
+	picture = GFX_report_event_generic_sign_treaty
+
+	is_triggered_only = yes	
+	
+	option = {
+			name = ethiopia.3.a
+			}
+	
+	option = { name = ethiopia.3.a }		
 }
 
