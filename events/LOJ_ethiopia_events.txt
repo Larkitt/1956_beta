@@ -39,6 +39,7 @@ country_event = {
 	
 	option = {
 			name = ethiopia.2.a
+			
 			}
 	
 	option = { name = ethiopia.2.a }		

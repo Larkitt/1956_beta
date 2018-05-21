@@ -481,21 +481,6 @@ modernize_1 = {
 			
 			traits = { smooth_talking_charmer }
 		}
-		ETH_selassie_gugsa = {
-
-			picture = generic_political_advisor_arab_3
-			
-			allowed = {
-				original_tag = ETH
-			}
-			available = {	
-				has_completed_focus = ETH_defeated
-				NOT = {
-				 has_completed_focus = ETH_lessons 
-				 	}
-				}		
-			traits = { backroom_backstabber }
-		}
 		ETH_abebe_aregai = {
 
 			picture = generic_political_advisor_arab_3

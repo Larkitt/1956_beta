@@ -183,13 +183,10 @@ ETH_support_from_NOR:0 "Help from Norway"
  ethiopia.2.t:0 "The Sitution on the Ground"
  ethiopia.2.d:0 "Our commanders recommend back in November that the only path to victory over the superior Italian forces is to launch a massive offensive while their forces are stalled for the wet season. We under took this offensive in December. The plan is to break though the weak part of their lines in Eritrea and Somaliland encircling their forces in the major ports of each region. With the bulk of our forces in the northern push. Though the offensive having success is a borderline fantasy. It'll at most help pin the Italians back while we mobiblize more men. At the cost of large amount of Ethiopian lives..."
  ethiopia.2.a:0 "God save us..."
- ethiopia.3.t:0 "Second major offensive"
- ethiopia.3.d:0 "The general staff have come to the conclusion that the time has come for a second major Counter-offesive. That we might have a chance to finally break though Italian lines"
- ethiopia.3.a:0 "Push the interlopers back into the sea!"
- ethiopia.3.t:0 "Viking Tamm offers to help command in the field"
- ethiopia.3.d:0 "Viking Tamm has apporach the general staff with the proposal that his services would be better used if he where to command our army's in the field rather then sit in Addis and advise the general staff."
- ethiopia.3.a:0 "No! We need your help advising the general staff!"
- ethiopia.3.b:0 "Yes! We despratly need you on the front lines!"
+ ethiopia.3.t:0 "Treaty of Alexandria"
+ ethiopia.3.d:0 "After swaying the League of Nations' member states to not recognize Italy's claims on Ethiopian land, representatives of the five Great Powers as well as diplomats from Ethiopia and Italy have met in Alexandria and agreed to end hostilities with Italy agreeing to cede control of Eritrea and Somaliland to Ethiopia."
+
+
 
 #worldevents
 
@@ -205,4 +202,7 @@ ETH_support_from_NOR:0 "Help from Norway"
  ethiopiadeal.1.t:0 "The Geneva agreement"
  ethiopiadeal.1.d:0 "It was revealed to them that though diplomatic back channels that Ethiopian diplomats under Selassie orders met with the Italian League of Nations representative in Geneva. Where they agreed to terms of surrender. Using the basis of the leaked Hoare-Laval Pact as a starting point for negations. The Italian Parliament, and Fascist Party leadership overwhelming above of the treaty. Ethiopia would be put under Italian control, but retrain indepence of local, and tribal matters. One of Haile Selassie demands was for the Italian government to have a member the Italian royal family appointed to leader of the country as to abide by the countries customs. The Italian Royal household agreed to this and have given Prince Amedeo, Duke of Aosta the honor. His was given the new title of Amedeo Giovanni I, King of Ethiopia."
  ethiopiadeal.1.a:0 "Well...That was easy"
- ethiopiadeal.1.t:0 "The Treaty of Alexandria"
+
+#Treaty of Alexandria Itlay side
+
+ ethiopiadeal.2.t:0 "The Treaty of Alexandria"
