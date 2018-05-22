@@ -4,13 +4,19 @@
  backwards:0 "Pre-Industrial society"
  backwards_desc:0 "Ethiopia is a country that is stuck in old tradition. This has made our country relante on a agrarian economy. Although attempts had been made to try to catch up and industrialize our country. In the grand scale of things these efforts have been futile."
  ETH_resistance_1:0 "War against Imperialism"
- ETH_resistance_1_desc:0 ""
+ ETH_resistance_1_desc:0 "Destory them!"
  ETH_resistance_2:0 "War against Imperialism"
+ ETH_resistance_2_desc:0 "Destory them!"
  ETH_resistance_3:0 "War against Imperialism"
+ ETH_resistance_3_desc:0 "Destory them!"
  ETH_resistance_4:0 "War against Imperialism" 
+ ETH_resistance_4_desc:0 "Destory them!"
  ETH_resistance_5:0 "War against Imperialism"
+ ETH_resistance_5_desc:0 "Destory them!"
  ETH_resistance_6:0 "War against Imperialism"
+ ETH_resistance_6_desc:0 "Destory them!"
  ETH_resistance_7:0 "War against Imperialism"
+ ETH_resistance_7_desc:0 "Destory them!"
  ETH_national_mobilization:0 "National Mobilization"
  christmas_offensive:0 "The Christmas Offensive"
  ETH_home_defense:0 "Defense of the Homeland"
@@ -37,6 +43,8 @@
  ETH_infiltration_idea_2_desc:0 "Sending our best Troops foward and behind enemy lines before a attack can cause our assaults with our less equipment troops to be more successfull."
  ETH_second_idea:0 "Major Counter-offesive"
  ETH_second_idea_desc:0 "Push them back!"
+ ETH_swedish_red_cross:0 "Red Cross Hospitals"
+
 #threats
 
 italo_ethiopian_pact:0 "Hoare Laval Pact"
@@ -66,7 +74,6 @@ ETH_support_from_NOR:0 "Help from Norway"
  ETH_Hoare_Laval_Pact:0 "Hoare Laval Pact"
  ETH_war_of_resistance:0 "The Christmas Offensive"
  ETH_fiveyear:0 "Our Five Year Plan"
-
  ETH_land_development:0 "Ironworks"
  ETH_land_development_desc:0 "We must develop our steel industry if we expect to meet the production demands of our armed forces."
  ETH_urban_factories:0 "Develop Addis Ababa"
@@ -206,3 +213,5 @@ ETH_support_from_NOR:0 "Help from Norway"
 #Treaty of Alexandria Itlay side
 
  ethiopiadeal.2.t:0 "The Treaty of Alexandria"
+ ethiopiadeal.2.d:0 "After swaying the League of Nations' member states to not recognize Italy's claims on Ethiopian land, representatives of the five Great Powers as well as diplomats from Ethiopia and Italy have met in Alexandria and agreed to end hostilities with Italy agreeing to cede control of Eritrea and Somaliland to Ethiopia."
+ ethiopiadeal.2.a:0 "We've failed our country"

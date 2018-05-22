@@ -54,6 +54,9 @@ country_event = {
 	
 	option = {
 			name = ethiopia.3.a
+			ITA = {white_peace = ETH}
+			ETH = { transfer_state = 550 }
+			ETH = { transfer_state = 559 }
 			}
 	
 	option = { name = ethiopia.3.a }		

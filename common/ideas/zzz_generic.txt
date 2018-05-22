@@ -137,6 +137,37 @@ ideas = {
 				fascism_drift = 0.1
 			}
 		}
+		super_buff = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			ai_will_do = {
+			factor = 0
+						}
+			
+			modifier = {
+				fascism_drift = 1
+				stability_weekly = 0.01
+				war_support_weekly = 0.01
+				production_speed_buildings_factor = 2
+				industrial_capacity_dockyard = 3
+				consumer_goods_factor = -0.1
+				local_resources_factor = 0.10
+				MONTHLY_POPULATION = 3
+				political_power_gain = 3
+				conscription = 0.1
+			}
+		}
 
 		internationalism = {
 			

@@ -47,3 +47,15 @@ news_event = {
 		name = { name = news.336.a }
 		}
 }
+country_event = {
+	id = ethiopiadeal.2
+	title = ethiopiadeal.2.t
+	desc = ethiopiadeal.2.d
+	picture = GFX_report_event_generic_sign_treaty
+
+	is_triggered_only = yes	
+	
+	option = {
+			name = ethiopiadeal.3.a
+			}		
+}

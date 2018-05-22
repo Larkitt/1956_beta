@@ -344,9 +344,9 @@ focus = {
 		prerequisite = { focus = ETH_steel_industry focus = ETH_silk_road_test }
 		mutually_exclusive = { focus = ETH_oil_industry }
 		#text = "Land DEVELOPMENT"
-		x = -1
-		y = 1
-		relative_position_id = ETH_steel_industry 
+		x = 1
+		y = 2
+		relative_position_id = ETH_civ
 		cost = 10
 		ai_will_do = {
 			factor = 70
@@ -375,11 +375,11 @@ focus = {
 		prerequisite = { focus = ETH_steel_industry focus = ETH_silk_road_test }
 		mutually_exclusive = { focus = ETH_rare_metals }
 		#text = "Land DEVELOPMENT"
-		x = 1
+		x = -1
 		y = 1
-		relative_position_id = ETH_steel_industry 
+		relative_position_id = ETH_civ
 		cost = 10
-		ai_will_do = {
+		ai_will_do = 1
 			factor = 70
 		}	
 		completion_reward = {
@@ -962,6 +962,7 @@ focus = {
 			NOR = {	add_opinion_modifier = { target = ITA modifier = unprovoked_aggression } }
 			EST = {	add_opinion_modifier = { target = ITA modifier = unprovoked_aggression } }
 				news_event = { id = news.335 hours = 8}
+
 				add_ideas = ETH_alone
 			}
 		}	
@@ -1003,7 +1004,7 @@ focus = {
 				add_opinion_modifier = { target = ETH modifier = large_decrease }
 				}
 			ETH = {
-				country_event = { id = ethiopia.5 days = 1 }
+				country_event = { id = ethiopia.3 days = 1 }
 				}
 			hidden_effect = { 
 			remove_ideas = second_italo_ethiopian_war
@@ -1140,6 +1141,14 @@ focus = {
 						}
 #######################
 #######################
+## Shared Italy tree ##
+#######################
+#######################
+
+
+
+#######################
+#######################
 # Defeated and Shamed #
 #######################
 #######################  
@@ -1155,7 +1164,7 @@ focus = {
 				  }
 			has_idea = choosen_path
 			}		
-			x = 22
+			x = 26
 			y = 0
 			cost = 1
 			ai_will_do = {	factor = 0 }
