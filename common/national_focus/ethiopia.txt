@@ -418,7 +418,7 @@ focus = {
 
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 9
 		}
 		completion_reward = {
 						add_timed_idea = {
@@ -486,7 +486,7 @@ focus = {
 		}
 
 		ai_will_do = {
-			factor = 20
+			factor = 8
 		}
 		completion_reward = {
 			add_ideas = ETH_home_defense
@@ -523,7 +523,7 @@ focus = {
 		}
 
 		ai_will_do = {
-			factor = 9
+			factor = 8
 		}
 		completion_reward = {
 			swap_ideas = { remove_idea = ETH_resistance_1 add_idea = ETH_resistance_2 }
@@ -553,7 +553,7 @@ focus = {
 			}
 		}
 		ai_will_do = {
-			factor = 12
+			factor = 7
 		}
 		completion_reward = {
 			271 = {
@@ -624,7 +624,7 @@ focus = {
 			}
 		}
 			ai_will_do = {
-			factor = 12
+			factor = 7
 		}
 		completion_reward = {
 			
@@ -659,7 +659,7 @@ focus = {
 			}
 		}
 		ai_will_do = {
-		factor = 1
+		factor = 7
 		}
 		completion_reward = {
 			add_manpower = -10000
@@ -698,7 +698,7 @@ focus = {
 			}
 		}
 		ai_will_do = {
-		factor = 0.1 
+		factor = 6
 		}
 		completion_reward = {
 			add_manpower = -10000
@@ -740,7 +740,7 @@ focus = {
 		}
 
 		ai_will_do = {
-			factor = 9
+			factor = 5
 		}
 		completion_reward = {
 			swap_ideas = { remove_idea = ETH_resistance_6 add_idea = ETH_resistance_7 }
@@ -767,7 +767,7 @@ focus = {
 		relative_position_id = ETH_national_mobilization
 		cost = 10
 		ai_will_do = {
-			factor = 5
+			factor = 9
 		}
 		completion_reward = {
 			add_ideas = ETH_swedish_red_cross
@@ -792,7 +792,7 @@ focus = {
 			}
 		}
 		ai_will_do = {
-		factor = 0.6
+		factor = 8
 		}
 		completion_reward = {
 			custom_effect_tooltip = available_military_high_command
@@ -1037,7 +1037,7 @@ focus = {
 			x = 0
 			y = 5
 			cost = 2
-			ai_will_do = {	factor = 0 }
+			ai_will_do = {	factor = 8 }
 
 			completion_reward = { add_ideas = ETH_black_lions }
 		}
@@ -1107,7 +1107,7 @@ focus = {
 			x = 18
 			y = 0
 			cost = 1
-			ai_will_do = {	factor = 0 }
+			ai_will_do = {	factor = 1 }
 
 			completion_reward = {
 					country_event = { id = ethiopia.1 }  

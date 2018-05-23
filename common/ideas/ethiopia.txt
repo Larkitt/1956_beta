@@ -68,7 +68,7 @@ second_italo_ethiopian_war = {
 		allowed = { original_tag = ETH	}
 		allowed_civil_war = { always = yes }
 		removal_cost = -1
-		picture = FRA_scw_intervention_nationalist_focus
+		picture = FRA_scw_intervention_nationalists_focus
 		modifier = {
 				war_support_weekly = 0.01
 				}
