@@ -10,7 +10,6 @@
  baltic_neutrality_league:0 "Baltic Protection League"
  benelux_faction:0 "Benelux"
  chile_faction:0 "Americas League"
- daitoakyoeiken:0 "Dai Tōa Kyōeiken"
  danish_communist_faction:0 "Nordic Socialist Union"
  danish_empire_faction:0 "Større Scandinavia"
  defense_commission:0 "Defense Commission"
@@ -28,5 +27,7 @@
  the_free_states:0 "Pact of the Free States"
  umajid_pact:0 "Umajid Pact"
  west_pacific_alliance:0 "West Pacific Pact"
-
- 
+ austria_fascist_faction:0 "Österreich Imperium"
+ austria_communist_faction:0 "Socialist States of Europe"
+ austria_neutrality_faction:0 "Venetia Pact"
+ austro_hungarian_faction:0 "Vienna Pact"

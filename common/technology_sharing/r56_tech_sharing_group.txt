@@ -1,5 +1,21 @@
 #####-----------------------------------------------------------> Mod by Sig "Greatexperiment" Altre
 
+###------> AUS <><> <><> <><> <><> <><>
+
+technology_sharing_group = {
+
+	id = austrian_research
+	name = austrian_research_name
+	desc = austrian_research_desc
+	picture = GFX_commonwealth_research
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+        is_in_faction_with = AUS
+    }
+}
+	
 ###------> AXM <><> <><> <><> <><> <><>
 
 technology_sharing_group = {
@@ -122,6 +138,26 @@ technology_sharing_group = {
     }
 }
 
+###------> HOL <><> <><> <><> <><> <><>
+
+technology_sharing_group = {
+
+	id = netherlands_research
+	name = netherlands_research_name
+	desc = netherlands_research_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.15
+
+    available = {
+        OR = {
+		is_in_faction_with = HOL
+		
+		is_puppet_of = HOL
+		}
+    }
+}
+
 ###------> MEX <><> <><> <><> <><> <><>
 
 technology_sharing_group = {
@@ -134,6 +170,7 @@ technology_sharing_group = {
         is_in_faction_with = MEX
     }
 }
+
 technology_sharing_group = {
 	id = MEX_wenner_gren
 	name = MEX_wenner_gren

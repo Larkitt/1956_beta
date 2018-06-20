@@ -37,6 +37,12 @@ opinion_modifiers = {
 		trade = yes
 		value = 30 
 	}
+
+###------> AUS <><> <><> <><> <><> <><>
+	
+	alps_defence_member = { 
+		value = 50
+	}
 	
 ###------> AXM <><> <><> <><> <><> <><>
 
