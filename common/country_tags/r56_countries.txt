@@ -2,6 +2,7 @@
 
 AHV = "countries/Aland.txt"
 ALG = "countries/Algeria.txt"
+AUH = "countries/Austria-Hungary.txt"
 BAH = "countries/Bahamas.txt"
 BLZ = "countries/Belize.txt"
 BOS	= "countries/bosnia.txt"

@@ -1,3 +1,5 @@
+#####-----> Austrian (AUS) National Focus File <><> <><> <><> <><> <><>
+
 focus_tree = {
 	id = austrian_focus
 	
@@ -10,18 +12,112 @@ focus_tree = {
 		}
 	}
 	
-	default = yes
+	default = no
 	
-	##########################
-	### INDUSTRIAL SECTION ###
-	##########################
+	reset_on_civilwar = no
+	
+	continuous_focus_position = { x = 0 y = 1000 }
+	
+	focus = {
+		id = AUS_proclaim_the_restoration_of_austria_hungary
+		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+		x = 0
+		y = 0
+
+		cost = 2
+		
+		ai_will_do = {
+			factor = 60
+		}
+		
+		available = {
+			controls_state = 155
+			controls_state = 154
+			controls_state = 43
+			is_subject = no
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			152 = { add_core_of = ROOT }
+			153 = { add_core_of = ROOT }
+			4 = { add_core_of = ROOT }
+			69 = { add_core_of = ROOT }
+			9 = { add_core_of = ROOT }
+			75 = { add_core_of = ROOT }
+			74 = { add_core_of = ROOT }
+			72 = { add_core_of = ROOT }
+			70 = { add_core_of = ROOT }
+			664 = { add_core_of = ROOT }
+			71 = { add_core_of = ROOT }
+			73 = { add_core_of = ROOT }
+			set_global_flag = form_austria_hungary_flag
+			news_event = { id = news.295 }
+			hidden_effect = {
+			AUH = {
+				annex_country = {
+					target = AUS transfer_troops = yes
+					target = HUN transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = AUS
+					is_core_of = HUN
+				}
+				AUH = {
+					add_state_core = PREV
+				}
+			}
+			every_state = {
+				limit = {
+					is_claimed_by = AUS
+					is_claimed_by = HUN
+				}
+				AUH = {
+				add_state_claim = PREV
+				}
+			}
+			every_state = {
+				limit = {
+					is_claimed_by = AUS
+					is_claimed_by = HUN
+					NOT = {
+						is_core_of = AUS
+						is_core_of = HUN
+					}
+				}
+				remove_claim_by = AUS
+				remove_claim_by = HUN
+			}
+			AUH = {
+				change_tag_from = AUS
+			} }
+		}
+	}
+	
+	###---> Industrial Section: Part I <><> <><> <><>
 	
 	focus = {
 		id = AUS_subsidize_STRABAG_construction
 		icon = GFX_goal_generic_construction
-		x = 8
+		
+		x = 4
 		y = 0
+		
 		cost = 10
+		
 		ai_will_do = {
 			factor = 10
 		}
@@ -37,28 +133,27 @@ focus_tree = {
 		cancel_if_invalid = yes
 		
 		completion_reward = {
-			custom_effect_tooltip = AUS_subsidize_STRABAG_construction_tt
-			153 = {
-				add_extra_state_shared_building_slots = 4
+			4 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			152 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
-			4 = {
-				add_extra_state_shared_building_slots = 5
+			153 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -68,81 +163,143 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
+			
+			custom_effect_tooltip = AUS_subsidize_STRABAG_construction_tt
 		}
 	}
 	
 	focus = {
-		id = AUS_fortify_the_austrian_alps
+		id = AUS_reinforce_our_borders
 		icon = GFX_goal_generic_construct_military
-		prerequisite = { focus = AUS_subsidize_STRABAG_construction }
-		x = 2
-		y = 1
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
 		
-		available = {
-			controls_state = 153
-			controls_state = 152
+		prerequisite = { focus = AUS_subsidize_STRABAG_construction }
+		
+		x = 1
+		y = 1
+		
+		cost = 15
+		
+		ai_will_do = {
+			factor = 10
 		}
 		
 		available_if_capitulated = no
 		
+		available = {
+			controls_state = 4
+			controls_state = 152
+			controls_state = 153
+		}
+		
 		cancel_if_invalid = yes
 		
-		completion_reward = {
-			custom_effect_tooltip = AUS_fortify_the_austrian_alps_tt
-			hidden_effect = {
-				153 = {
-					if = {
-						limit = { is_controlled_by = AUS }
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 9633
-							instant_build = yes
+		bypass = {
+			NOT = {
+				4 = {
+					any_province_building_level = {
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
 						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 11618
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 671
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 668
-							instant_build = yes
-						}
+						building = bunker
+						level < 3
 					}
 				}
 				152 = {
-					if = {
-						limit = { is_controlled_by = AUS }
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 3674
-							instant_build = yes
+					any_province_building_level = {
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
 						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 6691
-							instant_build = yes
+						building = bunker
+						level < 3
+					}
+				}
+				153 = {
+					any_province_building_level = {
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
 						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 9650
-							instant_build = yes
+						building = bunker
+						level < 3
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = AUS_reinforce_our_borders_tt
+			hidden_effect = {
+				4 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+							level < 3
+						}
+						instant_build = yes
+					}
+				}
+				152 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+							level < 3
+						}
+						instant_build = yes
+					}
+				}
+				153 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+							level < 3
+						}
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							69 = { CONTROLLER = {
+								OR  = {
+									tag = GER
+									is_in_faction_with = GER
+								}
+							} }
+							70 = { CONTROLLER = {
+								OR  = {
+									tag = GER
+									is_in_faction_with = GER
+								}
+							} }
+							664 = { CONTROLLER = {
+								OR  = {
+									tag = GER
+									is_in_faction_with = GER
+								}
+							} }
+							155 = { CONTROLLER = {
+								OR  = {
+									tag = GER
+									is_in_faction_with = GER
+								}
+							} }
+							102 = { CONTROLLER = {
+								OR  = {
+									tag = GER
+									is_in_faction_with = GER
+								}
+							} }
 						}
 					}
 				}
@@ -151,141 +308,56 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = AUS_fortify_the_danube_and_drava_rivers
+		id = AUS_defend_our_new_swizz_lands
 		icon = GFX_goal_generic_construct_military
-		prerequisite = { focus = AUS_fortify_the_austrian_alps }
+		
+		prerequisite = { focus = AUS_reinforce_our_borders }
+		
 		x = 1
 		y = 2
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
 		
-		available = {
-			controls_state = 152
-			controls_state = 4
+		cost = 15
+		
+		ai_will_do = {
+			factor = 2
 		}
 		
 		available_if_capitulated = no
-		
-		cancel_if_invalid = yes
-		
-		completion_reward = {
-			custom_effect_tooltip = AUS_fortify_the_danube_and_drava_rivers_tt
-			hidden_effect = {
-				152 = {
-					if = {
-						limit = { is_controlled_by = AUS }
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 3674
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 3673
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 3703
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 9665
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 11651
-							instant_build = yes
-						}
-					}
-				}
-				4 = {
-					if = {
-						limit = { is_controlled_by = AUS }
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 704
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 11666
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 3700
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 653
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 9646
-							instant_build = yes
-						}
-					}
-				}
-				102 = {
-					if = {
-						limit = { is_controlled_by = AUS }
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 665
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 6672
-							instant_build = yes
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = AUS_defend_our_new_borders
-		icon = GFX_goal_generic_construct_military
-		prerequisite = { focus = AUS_fortify_the_danube_and_drava_rivers }
-		x = 0
-		y = 3
-		cost = 15
-		ai_will_do = {
-			factor = 1
-		}
 		
 		available = {
 			controls_state = 3
 			controls_state = 151
 		}
 		
-		available_if_capitulated = no
-		
 		cancel_if_invalid = yes
 		
+		bypass = {
+			NOT = {
+				3 = {
+					any_province_building_level = {
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+						building = bunker
+						level < 3
+					}
+				}
+				151 = {
+					any_province_building_level = {
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+						building = bunker
+						level < 3
+					}
+				}
+			}
+		}
+		
 		completion_reward = {
-			custom_effect_tooltip = AUS_defend_our_new_borders_tt
+			custom_effect_tooltip = AUS_defend_our_new_swizz_lands_tt
 			hidden_effect = {
 				3 = {
 					if = {
@@ -386,96 +458,16 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = AUS_open_the_mittersill_mine
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = AUS_subsidize_STRABAG_construction }
-		x = 6
-		y = 1
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		
-		available = {
-			controls_state = 153
-		}
-		
-		available_if_capitulated = no
-		
-		cancel_if_invalid = yes
-		
-		completion_reward = {
-			add_resource = {
-				type = tungsten
-				amount = 26
-				state = 153
-			}
-		}
-	}
-	
-	focus = {
-		id = AUS_expand_erzberg_mine
-		icon = GFX_goal_generic_construct_civilian
-		prerequisite = { focus = AUS_subsidize_STRABAG_construction }
-		x = 10
-		y = 1
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		
-		available = {
-			controls_state = 152
-		}
-		
-		available_if_capitulated = no
-		
-		cancel_if_invalid = yes
-		
-		completion_reward = {
-			add_resource = {
-				type = steel
-				amount = 24
-				state = 152
-			}
-		}
-	}
-	
-	focus = {
-		id = AUS_expand_the_vienna_basin_oilfield
-		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = AUS_subsidize_STRABAG_construction }
-		x = 12
-		y = 1
-		cost = 10
-		ai_will_do = {
-			factor = 8
-		}
-		
-		available = {
-			controls_state = 4
-		}
-		
-		available_if_capitulated = no
-		
-		cancel_if_invalid = yes
-		
-		completion_reward = {
-			add_resource = {
-				type = oil
-				amount = 12
-				state = 4
-			}
-		}
-	}
-	
-	focus = {
 		id = AUS_extend_the_grossglockner_highway
 		icon = GFX_goal_generic_construct_infrastructure
+		
 		prerequisite = { focus = AUS_subsidize_STRABAG_construction }
-		x = 8
+		
+		x = 4
 		y = 1
+		
 		cost = 10
+		
 		ai_will_do = {
 			factor = 10
 		}
@@ -483,32 +475,38 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			controls_state = 4
 			controls_state = 152
 			controls_state = 153
 		}
 		
 		cancel_if_invalid = yes
+		
+		bypass = {
+			custom_trigger_tooltip = infrastructure_effort_tt
+				152 = {
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+				153 = {
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
 		
 		completion_reward = {
 			custom_effect_tooltip = AUS_extend_the_grossglockner_highway_tt
 			hidden_effect = {
-				4 = {
-					if = {
-						limit = { is_controlled_by = AUS }
-						add_building_construction = {
-							type = infrastructure
-							level = 10
-							instant_build = yes
-						}
-					}
-				}
 				152 = {
 					if = {
 						limit = { is_controlled_by = AUS }
 						add_building_construction = {
 							type = infrastructure
-							level = 10
+							level = 1
 							instant_build = yes
 						}
 					}
@@ -518,7 +516,7 @@ focus_tree = {
 						limit = { is_controlled_by = AUS }
 						add_building_construction = {
 							type = infrastructure
-							level = 10
+							level = 1
 							instant_build = yes
 						}
 					}
@@ -530,37 +528,54 @@ focus_tree = {
 	focus = {
 		id = AUS_hungarian_railways_and_roads_project
 		icon = GFX_goal_generic_construct_infrastructure
+		
 		prerequisite = { focus = AUS_extend_the_grossglockner_highway }
+		
 		x = 3
-		y = 2
+		y = 3
+		
 		cost = 10
+		
 		ai_will_do = {
-			factor = 10
+			factor = 2
 		}
 		
 		available = {
-			controls_state = 155
 			controls_state = 43
 			controls_state = 154
+			controls_state = 155		
 		}
 		
 		available_if_capitulated = no
 		
 		cancel_if_invalid = yes
 		
+		bypass = {
+			custom_trigger_tooltip = infrastructure_effort_tt
+				43 = {
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+				154 = {
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+				155 = {
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+		
 		completion_reward = {
 			custom_effect_tooltip = AUS_hungarian_railways_and_roads_project_tt
 			hidden_effect = {
-				155 = {
-					if = {
-						limit = { is_controlled_by = AUS }
-						add_building_construction = {
-							type = infrastructure
-							level = 10
-							instant_build = yes
-						}
-					}
-				}
 				43 = {
 					if = {
 						limit = { is_controlled_by = AUS }
@@ -581,6 +596,16 @@ focus_tree = {
 						}
 					}
 				}
+				155 = {
+					if = {
+						limit = { is_controlled_by = AUS }
+						add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
+						}
+					}
+				}
 			}
 		}
 	}
@@ -588,12 +613,16 @@ focus_tree = {
 	focus = {
 		id = AUS_construct_papa_air_base
 		icon = GFX_goal_generic_air_bomber
+		
 		prerequisite = { focus = AUS_hungarian_railways_and_roads_project }
+		
 		x = 2
-		y = 3
+		y = 4
+		
 		cost = 10
+		
 		ai_will_do = {
-			factor = 10
+			factor = 2
 		}
 		
 		available = {
@@ -618,88 +647,94 @@ focus_tree = {
 	focus = {
 		id = AUS_industrialise_the_great_hungarian_plains
 		icon = GFX_goal_generic_construct_civ_factory
+		
 		prerequisite = { focus = AUS_construct_papa_air_base }
+		
 		x = 2
-		y = 4
+		y = 5
+		
 		cost = 10
+		
 		ai_will_do = {
-			factor = 5
+			factor = 2
 		}
+		
+		available_if_capitulated = no
 		
 		available = {
 			controls_state = 43
 			controls_state = 154
 		}
 		
-		available_if_capitulated = no
-		
 		cancel_if_invalid = yes
 		
 		completion_reward = {
-			43 = {
-				if = {
-					limit = { is_controlled_by = AUS }
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
+			hidden_effect = {
+				43 = {
+					if = {
+						limit = { is_controlled_by = AUS }
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
 					}
 				}
-			}
-			154 = {
-				if = {
-					limit = { is_controlled_by = AUS }
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
+				154 = {
+					if = {
+						limit = { is_controlled_by = AUS }
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
 					}
 				}
-			}
-			custom_effect_tooltip = AUS_industrialise_the_great_hungarian_plains_tt
-			45 = {
-				if = {
-					limit = { is_controlled_by = AUS }
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
+				custom_effect_tooltip = AUS_industrialise_the_great_hungarian_plains_tt
+				45 = {
+					if = {
+						limit = { is_controlled_by = AUS }
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
 					}
 				}
-			}
-			82 = {
-				if = {
-					limit = { is_controlled_by = AUS }
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
+				76 = {
+					if = {
+						limit = { is_controlled_by = AUS }
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
 					}
 				}
-			}
-			83 = {
-				if = {
-					limit = { is_controlled_by = AUS }
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
+				82 = {
+					if = {
+						limit = { is_controlled_by = AUS }
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
 					}
 				}
-			}
-			76 = {
-				if = {
-					limit = { is_controlled_by = AUS }
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
+				83 = {
+					if = {
+						limit = { is_controlled_by = AUS }
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
 					}
 				}
 			}
@@ -711,7 +746,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = AUS_hungarian_railways_and_roads_project }
 		x = 4
-		y = 3
+		y = 4
 		cost = 10
 		ai_will_do = {
 			factor = 2
@@ -800,20 +835,24 @@ focus_tree = {
 	focus = {
 		id = AUS_secure_the_two_cities
 		icon = GFX_goal_generic_fortify_city
+		
 		prerequisite = { focus = AUS_fortify_the_hungarian_danube }
+		
 		x = 4
-		y = 4
-		cost = 10
+		y = 5
+		
+		cost = 5
+		
 		ai_will_do = {
 			factor = 2
 		}
+		
+		available_if_capitulated = no
 		
 		available = {
 			controls_state = 4
 			controls_state = 43
 		}
-		
-		available_if_capitulated = no
 		
 		cancel_if_invalid = yes
 		
@@ -1574,7 +1613,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = AUS_balkan_highways_project }
 		x = 8
-		y = 7
+		y = 8
 		cost = 10
 		ai_will_do = {
 			factor = 2
@@ -2349,9 +2388,217 @@ focus_tree = {
 		}
 	}
 	
+	###---> Industrial Section: Part II <><> <><> <><>
+	
+	focus = {
+		id = AUS_imperial_resource_companies
+		icon = GFX_focus_generic_industry_3
+		
+		x = 8
+		y = 0
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = no
+		
+		available = {
+			controls_state = 4
+		}
+		
+		cancel_if_invalid = yes
+		
+		completion_reward = {
+			4 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			add_ideas = AUS_imperial_comany_idea
+			
+		}
+	}
+	
+	focus = {
+		id = AUS_open_the_mittersill_mine
+		icon = GFX_goal_tungsten
+		
+		prerequisite = { focus = AUS_imperial_resource_companies }
+		
+		x = 6
+		y = 1
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = no
+		
+		available = {
+			controls_state = 153
+		}
+		
+		cancel_if_invalid = yes
+		
+		completion_reward = {
+			add_resource = {
+				type = tungsten
+				amount = 16
+				state = 153
+			}
+		}
+	}
+	
+	focus = {
+		id = AUS_expand_the_erzberg_mine
+		icon = GFX_focus_generic_steel
+		
+		prerequisite = { focus = AUS_imperial_resource_companies }
+		
+		x = 8
+		y = 1
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = no
+		
+		available = {
+			controls_state = 152
+		}
+		
+		cancel_if_invalid = yes
+		
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 152
+			}
+		}
+	}
+	
+	focus = {
+		id = AUS_expand_the_vienna_basin_oilfield
+		icon = GFX_goal_generic_oil_refinery
+		
+		prerequisite = { focus = AUS_imperial_resource_companies }
+		
+		x = 10
+		y = 1
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 8
+		}
+		
+		available_if_capitulated = no
+		
+		available = {
+			controls_state = 4
+		}
+		
+		cancel_if_invalid = yes
+		
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 8
+				state = 4
+			}
+		}
+	}
+	
 	##########################
 	### ELECTRONIC SECTION ###
 	##########################
+	
+	focus = {
+		id = AUS_electrify_the_railways
+		icon = GFX_goal_generic_construct_infrastructure
+		
+		x = 18
+		y = 0
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available_if_capitulated = no
+		
+		available = {
+			controls_state = 4
+			controls_state = 152
+			controls_state = 153
+		}
+		
+		cancel_if_invalid = yes
+		
+		bypass = {
+			custom_trigger_tooltip = infrastructure_effort_tt
+				4 = {
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+				152 = {
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+				153 = {
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = AUS_electrify_the_railways_tt
+			hidden_effect = {
+				4 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				152 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				153 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}			
+	}
 	
 	focus = {
 		id = AUS_subsidize_kapsch

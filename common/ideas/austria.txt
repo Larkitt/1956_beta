@@ -1,6 +1,18 @@
-ideas = {
+#####-----> Austrian (AUS) Idea File <><> <><> <><> <><> <><>
 
+ideas = {
+	
 	country = {
+		AUS_imperial_company_idea = {
+			
+			picture = FRA_factory_strikes
+			
+			modifier = {
+				global_building_slots_factor = 0.10
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.2
+			}
+		}
 		AUS_german_aero_tech = {
 			
 			allowed = {

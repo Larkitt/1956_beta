@@ -1,46 +1,49 @@
 ﻿l_english:
  
- #FOCUS
+ ###---> Focus <><> <><> <><>
  AUS_subsidize_STRABAG_construction:0 "Subsidize STRABAG Construction"
  AUS_subsidize_STRABAG_construction_desc:0 "No matter how many resources we apply, Austria can only produce new military installations so quickly. We must secure more industrial assets, such as those that STRABAG SE possess. Their assistance will be invaluable in keeping us ahead in industry."
  AUS_subsidize_STRABAG_construction_tt:0 "Unlocks STRABAG Construction Industrial Concern\n"
-
- AUS_fortify_the_austrian_alps:0 "Fortify the Austrian Alps"
- AUS_fortify_the_austrian_alps_desc:0 "The Austrian Alps represent an indispensable natural barrier. We can render our territories practically impregnable if we put effort into ensuring that they are properly fortified."
- AUS_fortify_the_austrian_alps_tt:0 "Add §Y14 Land Forts§! along the Austrian Central Alps "
-
- AUS_fortify_the_danube_and_drava_rivers:0 "Fortify the Danube and Drava Rivers"
- AUS_fortify_the_danube_and_drava_rivers_desc:0 "The Danube and the Drava have long been economic boons to Austria, but our interest in them is not economic. They are incredibly hard to cross - more so if we were to fortify them against enemy incursion."
- AUS_fortify_the_danube_and_drava_rivers_tt:0 "Add §Y18 Land Forts§! along the Austrian Danube and Drava rivers"
-
- AUS_defend_our_new_borders:0 "Defend Our New Borders"
- AUS_defend_our_new_borders_desc:0 "Now that we have occupied the mountainous Swiss terrain, their borders are our borders. We should take steps to ensure that none of the larger nations will come through here."
- AUS_defend_our_new_borders_tt:0 "Add §Y28 Land Forts§! along the French, German and Italian border with Switzerland"
-
- AUS_open_the_mittersill_mine:0 "Open the Mittersill Tungsten Mine"
- AUS_open_the_mittersill_mine_desc:0 "There is precious little tungsten to be had in the world - and we are sitting directly atop a massive reserve of it. Our industrial consultants have surveyed samples from Mittersill and advise us to begin excavations there."
-
- AUS_expand_erzberg_mine:0 "Expand Erzberg Iron Mine"
- AUS_expand_erzberg_mine_desc:0 "The Erzberg Mine is the largest reserve of iron that Austria possesses, and as of yet we don't exploit it as thoroughly as we could. Extending our open-pit operations should increase our ready supply of steel."
-
- AUS_expand_the_vienna_basin_oilfield:0 "Expand the Vienna Basin Oilfield"
- AUS_expand_the_vienna_basin_oilfield_desc:0 "We have a possibility in the Vienna oil basin, but our current rate of oil processing is lacking. Expanding our industry here will be a strong step towards a diverse and powerful war machine."
-
+ 
+ AUS_reinforce_our_borders:0 "Reinforce Our Borders"
+ AUS_reinforce_our_borders_desc:0 "Our border defences are not yet adequate to prevent our enemies from rolling in. The border must be protected at all costs!"
+ AUS_reinforce_our_borders_tt:0 "Adds §Y52 Land Forts§! along the entire Austrian border."
+ 
+ AUS_defend_our_new_swizz_lands:0 "Defend Our New Swizz Lands"
+ AUS_defend_our_new_swizz_lands_desc:0 "Now that we have occupied the mountainous Swiss terrain, their borders are our borders. We should take steps to ensure that none of the larger nations will come through here!"
+ AUS_defend_our_new_swizz_lands_tt:0 "Adds §Y28 Land Forts§! along the French, German and Italian border with Switzerland."
+ 
+ AUS_electrify_the_railways:0 "Electrify the Railways"
+ AUS_electrify_the_railways_desc:0 "Switzerland and several other countries has proved to us that electrified rail is the way of the future, yet we have been slow to adopt this innovation. It is time that we changed that."
+ AUS_electrify_the_railways_tt:0 "Adds §Y1 Infrastructure§! in §YTyrol§!, §YUpper Austria§! and §YLower Austria§!."
+ 
  AUS_extend_the_grossglockner_highway:0 "Extend the Grossglockner Highway"
  AUS_extend_the_grossglockner_highway_desc:0 "The Grossglockner Highway is a scenic route through the Austrian mountains, from Salzburg in the north to Carinthia in the south. It is a great feat of engineering, but we can improve on it by extending its route throughout Austria."
- AUS_extend_the_grossglockner_highway_tt:0 "Add §YMaximum Infrastructure§! in §YTyrol§!, §YUpper Austria§! and §YLower Austria§!"
-
+ AUS_extend_the_grossglockner_highway_tt:0 "Adds §Y1 Infrastructure§! in §YTyrol§! and §YUpper Austria§!."
+ 
+ AUS_imperial_resource_companies:0 "Imperial Resource Companies"
+ AUS_imperial_resource_companies_desc:0 "Not every company collapsed when the empire did. We still have several large corporations with their headquarters in Austria, despite our diminished size. We must take full advantage of this."
+ 
+ AUS_open_the_mittersill_mine:0 "Open the Mittersill Tungsten Mine"
+ AUS_open_the_mittersill_mine_desc:0 "There is precious little tungsten to be had in the world - and we are sitting directly atop a massive reserve of it. Our industrial consultants have surveyed samples from Mittersill and advise us to begin excavations there."
+ 
+ AUS_expand_the_erzberg_mine:0 "Expand the Erzberg Iron Mine"
+ AUS_expand_the_erzberg_mine_desc:0 "The Erzberg Mine is the largest reserve of iron that Austria possesses, and as of yet we don't exploit it as thoroughly as we could. Extending our open-pit operations should increase our ready supply of steel."
+ 
+ AUS_expand_the_vienna_basin_oilfield:0 "Expand the Vienna Basin Oilfield"
+ AUS_expand_the_vienna_basin_oilfield_desc:0 "We have a possibility in the Vienna oil basin, but our current rate of oil processing is lacking. Expanding our industry here will be a strong step towards a diverse and powerful war machine."
+ 
  AUS_hungarian_railways_and_roads_project:0 "Hungarian Railways and Roads Project"
- AUS_hungarian_railways_and_roads_project_desc:0 "The Hungarian transport system used to be the responsibility of the Austrian government before the separation of our states. Now that we are rejoined, it is up to us to bring their infrastructure up to snuff."
- AUS_hungarian_railways_and_roads_project_tt:0 "Add §YMaximum Infrastructure§! in §YTransdanubia§!, §YNorthern Hungary§! and §YAlföld§!"
-
+ AUS_hungarian_railways_and_roads_project_desc:0 "The Hungarian transport system used to be the responsibility of the Austrian government before the separation of our states. Now that we are reunited, it is up to us to bring their infrastructure up to snuff."
+ AUS_hungarian_railways_and_roads_project_tt:0 "Adds §Y2 Infrastructure§! in §YTransdanubia§!, §YNorthern Hungary§! and §YAlföld§!."
+ 
  AUS_construct_papa_air_base:0 "Construct Pápa Air Base"
- AUS_construct_papa_air_base_desc:0 "The Papa Air Base has been under production since 1936, and with Austrian intervention it can be at last completed. More air capacity would be invaluable for our war efforts."
-
+ AUS_construct_papa_air_base_desc:0 "The Papa Air Base has been under construction since 1936, and with Austrian intervention it can be at last completed. More air capacity would be invaluable for our war efforts."
+ 
  AUS_industrialise_the_great_hungarian_plains:0 "Industrialise the Great Hungarian Plains"
  AUS_industrialise_the_great_hungarian_plains_desc:0 "Hungary has great swathes of land that is entirely usable for industrial purposes, and is unneeded for any other purpose. The fact that this has not been exploited yet is a travesty in itself. We will develop this land to contribute to our efforts."
- AUS_industrialise_the_great_hungarian_plains_tt:0 "Controlling §YVojvodina§!, §YBanat§!, §YCrisana§! or §YNorth Transylvania§! will extend the bonus to those states"
-
+ AUS_industrialise_the_great_hungarian_plains_tt:0 "Adds §YCivilian Factories§! in §YNorthern Hungary§! and §YAlföld§!. Controlling §YVojvodina§!, §YBanat§!, §YCrisana§! or §YNorth Transylvania§! will extend the bonus to those states."
+ 
  AUS_fortify_the_hungarian_danube:0 "Fortify the Hungarian Danube"
  AUS_fortify_the_hungarian_danube_desc:0 "As in Austria, the Danube is a vital part of Hungary's defensive potential. We will continue our fortification efforts here."
  AUS_fortify_the_hungarian_danube_tt:0 "Add §Y20 Land Forts§! along the Transdanubian Border"
@@ -1101,7 +1104,9 @@
  austria.5023.d:0 ""
  austria.5023.a:0 "yes"
  
- #IDEAS
+ ###---> Ideas <><> <><> <><>
+ AUS_imperial_company_idea:0 "Imperial Companies"
+ AUS_imperial_company_idea_desc:0 "This country still retains many companies that pre-date the Great War, using their resources and knowledge effectively."
  AUS_eduard_freiherr:0 "Eduard Freiherr"
  AUS_alexander_lohr:0 "Alexander Löhr"
  AUS_lothar_rendulic:0 "Dr. Lothar Rendulic"
