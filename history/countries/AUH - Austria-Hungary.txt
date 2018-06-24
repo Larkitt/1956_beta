@@ -1,46 +1,19 @@
-﻿#####-----> Austrian (AUS) History File <><> <><> <><> <><> <><>
+﻿#####-----> Austro-Hungarian (AUH) History File <><> <><> <><> <><> <><>
+
+#Everything in here is in very "early-on" development.
 
 capital = 4
 
-oob = "AHU_1936"
+oob = "AUH_1936" #Does not exsist at the moment.
 
 add_ideas = {
 	volunteer_only
-	AUS_austro_fascism
-	AUS_pro_german_sentiment_1
-	AUS_germain
-	AUS_low_support_1
-	AUS_heimwehr
 }
-	
 
 set_technology = {
 	
 	infantry_weapons = 1
-	infantry_weapons1 = 1
-	motorised_infantry = 1
-	tech_mountaineers = 1
-	
-	tech_support = 1	
-	tech_recon = 1
-	tech_engineers = 1		
-	
-	gwtank = 1
-	basic_light_tank = 1
-	
-	gw_artillery = 1
-	interwar_antitank = 1
-	
-	trench_warfare = 1
-	
-	early_fighter = 1
-	early_bomber = 1
-	CAS1 = 1
-	naval_bomber1 = 1	
-	
-	formation_flying = 1
-	
-	synth_oil_experiments = 1
+	#Tech transfer should take care of this.
 }
 
 set_research_slots = 3
@@ -51,19 +24,19 @@ set_politics = {
 	
 	parties = {
 		neutrality = {
-			popularity = 40
+			popularity = 48
 		}
 		
 		fascism = {
-			popularity = 35
+			popularity = 40
 		}
 		
 		democratic = {
-			popularity = 20
+			popularity = 10
 		}
 		
 		communism = {
-			popularity = 5
+			popularity = 2
 		}
 	}
 	
@@ -74,11 +47,11 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "Kurt, my man"
-	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
-	picture = "Portrait_Austria_Kurt_Schuschnigg.dds"
+	name = "Otto von Habsburg"
+	desc = "POLITICS_OTTO_VON_HABSBURG_DESC"
+	picture = GFX_Portrait_hungary_otto_von_hapsburg
 	expire = "1965.1.1"
-	ideology = corporatism
+	ideology = despotism
 	traits = {
 		#
 	}
@@ -115,18 +88,4 @@ create_country_leader = {
 	traits = {
 		#
 	}
-}
-
-create_field_marshal = {
-	name = "meme"
-	portrait_path = "gfx/leaders/EYE/Portrait_EYE_Wilhelm_Zehner.dds"
-	traits = { brilliant_strategist war_hero infantry_officer inspirational_leader trait_mountaineer }
-	skill = 4
-	attack_skill = 5
-	defense_skill = 6
-	planning_skill = 5
-	logistics_skill = 4
-	
-	# set_unit_leader_flag = anti_nazi WHY IS THIS NOT A THING!? :(
-	id = 22010
 }

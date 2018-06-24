@@ -326,9 +326,9 @@ form_gran_colombia_category = {
 }
 
 form_austria_hungary_category = {
-
-	reintegrate_austro_hungarian_empire = {
-
+	
+	HUN_restore_austria_hungary = {
+	
 		icon = generic_form_nation
 
 		allowed = {
@@ -384,33 +384,27 @@ form_austria_hungary_category = {
 		}
 	}
 	
-	AUS_reintegrate_austro_hungarian_empire = {
-
+	AUS_restore_austria_hungary = {
+	
 		icon = generic_form_nation
 
 		allowed = {
 			original_tag = AUS
-			has_dlc = "Waking the Tiger"
 		}
-
+		
 		available = {
 			is_subject = no
-			controls_state = 155
+			controls_state = 4
 			controls_state = 43
+			controls_state = 152
+			controls_state = 153
 			controls_state = 154
-			controls_state = 102
-			controls_state = 103
-			controls_state = 104
-			controls_state = 109
-			controls_state = 45
-			controls_state = 83
-			controls_state = 76
-			controls_state = 84
+			controls_state = 155
 		}
 
 		visible = {
 			tag = AUS
-			has_completed_focus = AUS_proclaim_the_restoration_of_austria_hungary
+			has_completed_focus = AUS_hungary_says_no
 			NOT = { has_global_flag = reintegrate_the_empire_flag }
 		}
 
@@ -430,8 +424,37 @@ form_austria_hungary_category = {
 			163 = { add_core_of = ROOT }
 			736 = { add_core_of = ROOT }
 			set_global_flag = reintegrate_the_empire_flag
+			hidden_effect = {
+			HUN = {
+				random_owned_controlled_state = {
+					AUH = { transfer_state = PREV }
+				}
+			}
+			AUH = {	change_tag_from = AUS }
+			HUN = {
+				AUH = {
+					transfer_technology = yes
+				}
+			}
+			AUS = {
+				AUH = {
+					transfer_technology = yes
+				}
+				every_unit_leader = {
+					set_unit_leader_flag = AUS_leader
+					set_nationality = AUH
+				}
+			}
+			every_state = {
+				limit = { OR = { is_core_of = AUS is_core_of = HUN } }
+				
+				add_core_of = AUH
+			}
+			
+			AUH = { annex_country = { target = AUS transfer_troops = yes } }
+			}
 		}
-
+		
 		ai_will_do = {
 			factor = 200
 			modifier = {

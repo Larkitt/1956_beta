@@ -63,6 +63,20 @@
  ARG_BRA_autonomy_integrated_puppet:0 "Platine Territory"
  ARG_BRA_autonomy_dominion: "Brazilian Argentina"
  
+ #AUH
+ AUH_fascism:0 "Kingdom of Austria-Hungary"
+ AUH_fascism_DEF:0 "The Kingdom of Austria-Hungary"
+ AUH_neutrality:0 "Austria-Hungary"
+ AUH_neutrality_DEF:0 "Austria-Hungary"
+ AUH_democratic:0 "Austria-Hungary"
+ AUH_democratic_DEF:0 "Austria-Hungary"
+ AUH_communism:0 "People's Republic of Austria-Hungary"
+ AUH_communism_DEF:0 "The People's Republic of Austria-Hungary"
+ AUH_fascism_ADJ:0 "Austro-Hungarian"
+ AUH_neutrality_ADJ:0 "Austro-Hungarian"
+ AUH_democratic_ADJ:0 "Austro-Hungarian"
+ AUH_communism_ADJ:0 "Austro-Hungarian"
+ 
  #AUS
  AUS_fascism:0 "Austria"
  AUS_fascism_DEF:0 "Austria"
@@ -74,8 +88,6 @@
  AUS_democratic_DEF:0 "The Republic of Austria"
  AUS_communism:0 "People's Republic of Austria"
  AUS_communism_DEF:0 "The People's Republic of Austria"
- AUS_SOV_puppet:0 "Austrian Soviet Republic"
- AUS_SOV_puppet_DEF:0 "The Austrian Soviet Republic"
  AUS_fascism_ADJ:0 "Austrian"
  AUS_neutrality_ADJ:0 "Austrian"
  AUS_democratic_ADJ:0 "Austrian"

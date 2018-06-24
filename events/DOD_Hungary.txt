@@ -294,7 +294,7 @@ country_event = {
 			}
 		}
 		custom_effect_tooltip =  GAME_OVER_TT
-		HUN = { country_event = { id = DOD_hungary.11 hours = 6 } }
+		AUH = { country_event = { id = DOD_hungary.11 hours = 6 } }
 		
 	}
 	option = { #A close association status
@@ -302,7 +302,7 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		HUN = { country_event = { id = DOD_hungary.12 hours = 6 } }
+		AUH = { country_event = { id = DOD_hungary.12 hours = 6 } }
 	}
 	option = { #Refuse
 		name = DOD_hungary.10.c
@@ -313,7 +313,7 @@ country_event = {
 				factor = 2 #we're good thanks
 			}
 		}
-		HUN = { country_event = { id = DOD_hungary.13 hours = 6 } }
+		AUH = { country_event = { id = DOD_hungary.13 hours = 6 } }
 		set_country_flag = HUN_AH_CZE_refused #needed for munich chain
 	}
 
@@ -336,7 +336,7 @@ country_event = {
 			}
 		}
 		annex_country = { target = CZE transfer_troops = yes }
-		HUN = { set_country_flag = CZE_annexed_peacefully } # Used to change division name lists for HUN
+		AUH = { set_country_flag = CZE_annexed_peacefully } # Used to change division name lists for HUN
 	}
 
 }
@@ -360,7 +360,7 @@ country_event = {
 			}
 			random_country = {
 				limit = { 
-					is_in_faction_with = HUN 
+					is_in_faction_with = AUH
 					is_faction_leader = yes
 				}
 				add_to_faction = CZE
@@ -381,19 +381,14 @@ country_event = {
 
 	option = { #say no
 		name = DOD_hungary.13.a
-			add_state_claim = 69
-			add_state_claim = 9
-			add_state_claim = 75
-			add_state_claim = 70
-			add_state_claim = 74
-			add_state_claim = 71
-			add_state_claim = 73
-			add_state_claim = 72
-			add_state_claim = 664
-		
+			create_wargoal = {
+				type = take_core_state
+				target = CZE
+				generator = { 9 69 70 71 72 73 74 75 664 }
+			}
+		}
 	}
-
-}
+	
 #Hungary at war, Sweden gets offer to support
 country_event = {
 	id = DOD_hungary.20
