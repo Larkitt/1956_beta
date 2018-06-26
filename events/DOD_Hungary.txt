@@ -258,7 +258,7 @@ country_event = {
 
 }
 
-#protect Czechoslovakia
+#protect Czechoslovakia - now used for austria-hungary temporarliy.
 country_event = {
 	id = DOD_hungary.10 
 	title = DOD_hungary.10.t
@@ -332,7 +332,7 @@ country_event = {
 		name = DOD_hungary.11.a
 		CZE = {
 			every_unit_leader = {
-				set_nationality = HUN
+				set_nationality = AUH
 			}
 		}
 		annex_country = { target = CZE transfer_troops = yes }
@@ -388,7 +388,7 @@ country_event = {
 			}
 		}
 	}
-	
+
 #Hungary at war, Sweden gets offer to support
 country_event = {
 	id = DOD_hungary.20
@@ -1251,6 +1251,7 @@ country_event = {
 	}
 }
 
+#Demand Transylvania event chain - now for Austria-Hungary temporarliy.
 #Hungary demands transylvania - agree?
 country_event = {
 	id = DOD_hungary.50
@@ -1269,11 +1270,11 @@ country_event = {
 				factor = 0
 			}
 			modifier = {
-				strength_ratio = { tag = HUN ratio < 0.8 }
+				strength_ratio = { tag = AUH ratio < 0.8 }
 				factor = 2
 			}
 		}
-		HUN = { country_event = { id = DOD_hungary.51 } }
+		AUH = { country_event = { id = DOD_hungary.51 } }
 		add_stability = -0.25
 		add_war_support = -0.1
 
@@ -1284,7 +1285,7 @@ country_event = {
 		ai_chance = {
 			factor = 90
 		}
-		HUN = { country_event = { id = DOD_hungary.52 } }
+		AUH = { country_event = { id = DOD_hungary.52 } }
 	}
 }
 
@@ -1310,7 +1311,7 @@ country_event = {
 				set_country_flag = second_vienna_accepted_all #needed for event bulgaria.4
 			}
 		}
-		HUN = {
+		AUH = {
 			if = {
 				limit = {
 					FROM = {
@@ -1423,7 +1424,7 @@ country_event = {
 		ai_chance = {
 			factor = 35
 			modifier = { 
-				strength_ratio = { tag = HUN ratio < 0.8 }
+				strength_ratio = { tag = AUH ratio < 0.8 }
 				factor = 0.5
 			}
 			modifier = { 
@@ -1436,7 +1437,7 @@ country_event = {
 			}
 		}
 		add_stability = -0.15
-		HUN = {
+		AUH = {
 			country_event = { id = DOD_hungary.51 }
 		}
 	}
@@ -1467,7 +1468,7 @@ country_event = {
 				GER = {
 					NOT = {
 						OR = {
-							has_war_with = HUN
+							has_war_with = AUH
 							has_war_with = ROM
 						}
 					}
@@ -1480,7 +1481,7 @@ country_event = {
 				ITA = {
 					NOT = {
 						OR = {
-							has_war_with = HUN
+							has_war_with = AUH
 							has_war_with = ROM
 						}
 						is_in_faction_with = GER
@@ -1514,7 +1515,7 @@ country_event = {
 		ai_chance = {
 			factor = 35
 		}
-		HUN = { country_event = { id = DOD_hungary.55 hours = 24 } }
+		AUH = { country_event = { id = DOD_hungary.55 hours = 24 } }
 		
 	}
 }
@@ -1596,7 +1597,7 @@ country_event = {
 			GER = {
 				NOT = {
 					OR = {
-						has_war_with = HUN
+						has_war_with = AUH
 						has_war_with = ROM
 						is_in_faction_with = ROM
 						has_country_flag = HUN_mediation_refused
@@ -1617,7 +1618,7 @@ country_event = {
 			ENG = {
 				NOT = {
 					OR = {
-						has_war_with = HUN
+						has_war_with = AUH
 						has_war_with = ROM
 						is_in_faction_with = ROM
 						has_country_flag = HUN_mediation_refused
@@ -1637,7 +1638,7 @@ country_event = {
 			FRA = {
 				NOT = {
 					OR = {
-						has_war_with = HUN
+						has_war_with = AUH
 						has_war_with = ROM
 						is_in_faction_with = ROM
 						has_country_flag = HUN_mediation_refused
@@ -1657,7 +1658,7 @@ country_event = {
 			ITA = {
 				NOT = {
 					OR = {
-						has_war_with = HUN
+						has_war_with = AUH
 						has_war_with = ROM
 						is_in_faction_with = ROM
 						has_country_flag = HUN_mediation_refused
@@ -1677,7 +1678,7 @@ country_event = {
 			AND = {
 				GER = {
 					OR = {
-						has_war_with = HUN
+						has_war_with = AUH
 						has_war_with = ROM
 						is_in_faction_with = ROM
 						has_country_flag = HUN_mediation_refused
@@ -1685,7 +1686,7 @@ country_event = {
 				}
 				ENG = {
 					OR = {
-						has_war_with = HUN
+						has_war_with = AUH
 						has_war_with = ROM
 						is_in_faction_with = ROM
 						has_country_flag = HUN_mediation_refused
@@ -1693,7 +1694,7 @@ country_event = {
 				}
 				FRA = {
 					OR = {
-						has_war_with = HUN
+						has_war_with = AUH
 						has_war_with = ROM
 						is_in_faction_with = ROM
 						has_country_flag = HUN_mediation_refused
@@ -1701,7 +1702,7 @@ country_event = {
 				}
 				ITA = {
 					OR = {
-						has_war_with = HUN
+						has_war_with = AUH
 						has_war_with = ROM
 						is_in_faction_with = ROM
 						has_country_flag = HUN_mediation_refused
@@ -1709,7 +1710,7 @@ country_event = {
 				}
 			}
 		}
-		HUN = {
+		AUH = {
 			country_event = { id = DOD_hungary.63 }
 		}
 	}
@@ -1731,9 +1732,9 @@ country_event = {
 			GER = {
 				NOT = {
 					OR = {
-						has_war_with = HUN
+						has_war_with = AUH
 						has_war_with = ROM
-						is_in_faction_with = HUN
+						is_in_faction_with = AUH
 						has_country_flag = ROM_mediation_refused
 					}
 				}
@@ -1753,9 +1754,9 @@ country_event = {
 			ENG = {
 				NOT = {
 					OR = {
-						has_war_with = HUN
+						has_war_with = AUH
 						has_war_with = ROM
-						is_in_faction_with = HUN
+						is_in_faction_with = AUH
 						has_country_flag = ROM_mediation_refused
 					}
 				}
@@ -1776,9 +1777,9 @@ country_event = {
 			FRA = {
 				NOT = {
 					OR = {
-						has_war_with = HUN
+						has_war_with = AUH
 						has_war_with = ROM
-						is_in_faction_with = HUN
+						is_in_faction_with = AUH
 						has_country_flag = ROM_mediation_refused
 					}
 				}
@@ -1796,9 +1797,9 @@ country_event = {
 			SOV = {
 				NOT = {
 					OR = {
-						has_war_with = HUN
+						has_war_with = AUH
 						has_war_with = ROM
-						is_in_faction_with = HUN
+						is_in_faction_with = AUH
 						has_country_flag = ROM_mediation_refused
 					}
 				}
@@ -1816,9 +1817,9 @@ country_event = {
 			ITA = {
 				NOT = {
 					OR = {
-						has_war_with = HUN
+						has_war_with = AUH
 						has_war_with = ROM
-						is_in_faction_with = HUN
+						is_in_faction_with = AUH
 						has_country_flag = ROM_mediation_refused
 					}
 				}
@@ -1836,34 +1837,34 @@ country_event = {
 			AND = {
 				GER = {
 					OR = {
-						has_war_with = HUN
+						has_war_with = AUH
 						has_war_with = ROM
-						is_in_faction_with = HUN
+						is_in_faction_with = AUH
 						has_country_flag = ROM_mediation_refused
 					}
 				}
 				ENG = {
 					OR = {
-						has_war_with = HUN
+						has_war_with = AUH
 						has_war_with = ROM
-						is_in_faction_with = HUN
+						is_in_faction_with = AUH
 						has_country_flag = ROM_mediation_refused
 					}
 				}
 				FRA = {
 					OR = {
-						has_war_with = HUN
+						has_war_with = AUH
 						has_war_with = ROM
-						is_in_faction_with = HUN
+						is_in_faction_with = AUH
 						has_country_flag = ROM_mediation_refused
 					}
 				}
 				AND = {
 					SOV = {
 						OR = {
-							has_war_with = HUN
+							has_war_with = AUH
 							has_war_with = ROM
-							is_in_faction_with = HUN
+							is_in_faction_with = AUH
 							has_country_flag = ROM_mediation_refused
 						}
 					}
@@ -1915,11 +1916,11 @@ country_event = {
 		ai_chance = {
 			factor = 70
 			modifier = {
-				is_in_faction_with = HUN
+				is_in_faction_with = AUH
 				factor = 100
 			}
 		}
-		HUN = { add_opinion_modifier = { target = PREV modifier = backed_our_cause } }
+		AUH = { add_opinion_modifier = { target = PREV modifier = backed_our_cause } }
 		save_event_target_as = HUN_mediator
 		ROM = { country_event = { id = DOD_hungary.56 hours = 24 } }
 	}
@@ -1928,12 +1929,12 @@ country_event = {
 		ai_chance = {
 			factor = 30
 		}
-		HUN = { add_opinion_modifier = { target = PREV modifier = betrayed_our_cause } }
+		AUH = { add_opinion_modifier = { target = PREV modifier = betrayed_our_cause } }
 		if = {
 			limit = {
 			 	has_global_flag = HUN_rebuffed
 			}
-			HUN = { country_event = { id = DOD_hungary.63 } }
+			AUH = { country_event = { id = DOD_hungary.63 } }
 		}
 		if = {
 			limit = {
@@ -1941,7 +1942,7 @@ country_event = {
 					has_global_flag = HUN_rebuffed
 				}
 			}
-			HUN = { country_event = { id = DOD_hungary.55 } }
+			AUH = { country_event = { id = DOD_hungary.55 } }
 			set_global_flag = HUN_rebuffed
 		}
 		clr_country_flag = HUN_mediation
@@ -2019,7 +2020,7 @@ country_event = {
 		ai_chance = {
 			factor = 35
 			modifier = {
-				is_in_faction_with = HUN
+				is_in_faction_with = AUH
 				factor = 100
 			}
 			modifier = {
@@ -2028,7 +2029,7 @@ country_event = {
 			}
 		}
 		add_threat = 1
-		give_guarantee = HUN
+		give_guarantee = AUH
 		ROM = { country_event = { id = DOD_hungary.61 } }
 	}
 
@@ -2037,7 +2038,7 @@ country_event = {
 		ai_chance = {
 			factor = 35
 			modifier = {
-				is_in_faction_with = HUN
+				is_in_faction_with = AUH
 				factor = 0
 			}
 			modifier = {
@@ -2089,7 +2090,7 @@ country_event = {
 					NOT = { has_global_flag = Balkan_crisis_HUN_folded }
 				}
 			}
-			HUN = { country_event = { id = DOD_hungary.51 } }
+			AUH = { country_event = { id = DOD_hungary.51 } }
 			remove_ideas = ROM_war_preparation
 			set_global_flag = Balkan_crisis_ROM_folded
 		}
@@ -2124,7 +2125,7 @@ country_event = {
 				NOT = { has_global_flag = Balkan_crisis_HUN_folded }
 				#idea is that the events can fire at the same time, but selecting the mediation option only fires the next event once
 			}
-			HUN = { country_event = { id = DOD_hungary.55 hours = 24 } }
+			AUH = { country_event = { id = DOD_hungary.55 hours = 24 } }
 		}
 		set_global_flag = Balkan_crisis_mediation_requested
 	}
@@ -2292,7 +2293,7 @@ country_event = {
 				factor = 0.2
 			}
 		}
-		HUN = {country_event = { id = DOD_hungary.51 } }
+		AUH = {country_event = { id = DOD_hungary.51 } }
 		remove_ideas = ROM_war_preparation
 	}
 
@@ -2371,9 +2372,9 @@ country_event = {
 				factor = 2
 			}
 		}
-		HUN = { add_opinion_modifier = { target = PREV modifier = betrayed_our_cause } }
+		AUH = { add_opinion_modifier = { target = PREV modifier = betrayed_our_cause } }
 		add_war_support = -0.05
-		HUN = { country_event = { id = DOD_hungary.67 } }
+		AUH = { country_event = { id = DOD_hungary.67 } }
 	}
 
 	option = {# Support Hungary
@@ -2381,13 +2382,13 @@ country_event = {
 		ai_chance = {
 			factor = 70 
 		}
-		give_guarantee = HUN #should make them want to join war
-		HUN = { country_event = { id = DOD_hungary.67 hours = 12} }
+		give_guarantee = AUH #should make them want to join war
+		AUH = { country_event = { id = DOD_hungary.67 hours = 12} }
 		set_country_flag = HUN_war_support
 		add_war_support = 0.05
 		add_ai_strategy = { 
     		type = support
-     		id = "HUN"			
+     		id = "AUH"			
  			value = 200
     	}
 	}
@@ -2457,7 +2458,7 @@ country_event = {
 		ai_chance = {
 			factor = 25
 		}
-		HUN = { 
+		AUH = { 
 			set_country_flag = HUN_mediation_against
 			country_event = { id = DOD_hungary.63 days = 1 } 
 		}
@@ -2479,7 +2480,7 @@ country_event = {
 		ai_chance = {
 			factor = 80
 		}
-		HUN = { country_event = { id = DOD_hungary.70 } }
+		AUH = { country_event = { id = DOD_hungary.70 } }
 		remove_ideas = ROM_war_preparation
 		set_country_flag = second_vienna_accepted_north #for event bulgaria.4
 	}
@@ -2528,7 +2529,7 @@ country_event = {
 		ai_chance = {
 			factor = 25
 			modifier = {
-				is_in_faction_with = HUN
+				is_in_faction_with = AUH
 				factor = 20
 			}
 		}
@@ -2616,7 +2617,7 @@ country_event = {
 		}
 		if = {
 			limit = { has_global_flag = HUN_mediation_HUN_nothing }
-			HUN = { country_event = { id = DOD_hungary.63 } }
+			AUH = { country_event = { id = DOD_hungary.63 } }
 		}
 	}
 	option = {# counteroffer
@@ -2771,7 +2772,7 @@ country_event = {
 		}
 		if = {
 			limit = { has_global_flag = HUN_mediation_HUN_nothing }
-			HUN = { country_event = { id = DOD_hungary.63 } }
+			AUH = { country_event = { id = DOD_hungary.63 } }
 		}
 	}
 	option = {# refuse and walk out of negotiations
@@ -2787,7 +2788,7 @@ country_event = {
 				factor = 0 #would be dumb as all hell
 			}
 		}
-		HUN = { country_event = { id = DOD_hungary.75 } }
+		AUH = { country_event = { id = DOD_hungary.75 } }
 	}
 
 }

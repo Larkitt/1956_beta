@@ -23,6 +23,10 @@
  ARG_neutrality_party:0 "Concordancia"
  ARG_neutrality_party_long:0 "Concordancia"
  
+ #AUH
+ AUH_neutrality_party:0 "Habsburg"
+ AUH_neutrality_party_long:0 "House of Habsburg"
+ 
  #AUS
  AUS_communism_party:0 "KPÖ"
  AUS_communism_party_long:0 "Kommunistische Partei Österreichs"

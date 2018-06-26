@@ -2019,62 +2019,12 @@ focus_tree = {
 		}
 	}
 	
-	#Alternative To Protect Czechoslovakia
-	focus = {
-		id = AUH_move_on_the_czechs
-		icon = GFX_goal_generic_major_war
-		x = 33
-		y = 0
-		
-		mutually_exclusive = { focus = HUN_protect_czechoslovakia }
-		
-		cost = 10
-
-		ai_will_do = {
-			factor = 60
-		}
-		
-		available = {
-			has_army_manpower = { size > 150000 }
-			is_subject = no
-			country_exists = CZE
-		}
-
-		bypass = {
-			CZE = {
-				OR = {
-					exists = no
-				}
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			AUH = {
-				create_wargoal = {
-					type = take_core_state
-					target = CZE
-					generator = { 9 69 70 71 72 73 74 75 664 }
-				}
-			}
-		}
-	}
-	
 	#Hungary (DoD) Focuses Moved
 	focus = {
-		id = HUN_protect_czechoslovakia
+		id = AUH_the_czech_situation
 		icon = GFX_goal_generic_defence
-		x = 35
+		x = 34
 		y = 0
-		
-		mutually_exclusive = { focus = AUH_move_on_the_czechs }
 		
 		cost = 10
 
@@ -2108,11 +2058,70 @@ focus_tree = {
 			CZE = { country_event = { id = DOD_hungary.10 } }
 		}
 	}
+	
+	focus = {
+		id = HUN_claim_transylvania
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = AUH_the_czech_situation }
+		x = 33
+		y = 1
 
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+			has_army_manpower = { size > 200000 }
+			76 = { OWNER = { NOT = { is_in_faction_with = AUH } } }
+			is_subject = no
+		}
+
+		bypass = {
+			controls_state = 76
+			controls_state = 83
+			controls_state = 84
+			controls_state = 82
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_state_claim = 76
+			add_state_claim = 83
+			add_state_claim = 84
+			add_state_claim = 82
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = ROM
+					}
+					threat < 0.5
+					ROM = {
+						OR = {
+							owns_state = 76
+							owns_state = 83
+							owns_state = 84
+							owns_state = 82
+						}
+					}
+				}
+				ROM = { country_event = DOD_hungary.50 }
+			}	
+		}
+	}
+	
 	focus = {
 		id = HUN_march_to_the_shore
 		icon = GFX_focus_generic_strike_at_democracy3
-		prerequisite = { focus = AUH_move_on_the_czechs focus = HUN_protect_czechoslovakia }
+		prerequisite = { focus = HUN_claim_transylvania }
 		x = 33
 		y = 2
 
@@ -2213,7 +2222,7 @@ focus_tree = {
 	focus = {
 		id = HUN_claim_galicia
 		icon = GFX_focus_generic_strike_at_democracy1
-		prerequisite = { focus = HUN_protect_czechoslovakia focus = AUH_move_on_the_czechs }
+		prerequisite = { focus = AUH_the_czech_situation }
 		x = 35
 		y = 1
 
